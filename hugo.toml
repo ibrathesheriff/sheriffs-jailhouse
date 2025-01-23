@@ -1,3 +1,8 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://ibrathesheriff.com/'
+languageCode = 'en-gb'
+title = 'ibrathesheriff'
+theme = 'green-screen'
+pygmentsUseClasses = true
+[params]
+  author = "ibrathesheriff"
+  description = "Explore the Sheriff's Jailhouse: a dynamic personal portfolio and blog site showcasing my projects, insights, and developer journey."

@@ -1,0 +1,43 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    cursor: var(--normal-cursor);
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    font-family: var(--main-font);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    color: var(--text-white);
+}
+
+/* scrollbar width */
+::-webkit-scrollbar {
+    height: 7.5px;
+    width: 7.5px;
+}
+
+/* scrollbar track (container) colour */
+::-webkit-scrollbar-track {
+    background-color: rgba(18, 51, 10, 1); 
+}
+
+::-webkit-scrollbar-track:hover {
+    background: var(--background-color); 
+}
+
+/* the thumb the user moves */
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: var(--text-grey); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: 7.5px;
+    background: var(--text-light-gray); 
+}
