@@ -1,0 +1,23 @@
+.ascii-progress-bar {
+    display: grid;
+    place-items: center; 
+
+    margin-top: 5%;
+    font-size: 1.3em;
+    color: var(--sheriff-green);
+
+    .progress-bar-text {
+        text-align: center;
+    }
+
+    /* For screens up to 768px wide (e.g., smartphones) */
+    @media (max-width: 768px) {
+        font-size: 0.5em;
+    }
+}
+
+.progress-bar-info {
+    margin-top: 2.5%;
+    text-align: center;
+    color: var(--sheriff-green);
+}
