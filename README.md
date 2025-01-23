@@ -19,7 +19,16 @@ To run the site locally:
     ```
     hugo server
     ```
+    or to run with fast rendering disabled:
+    ```
+    hugo server --disableFastRender
+    ```
 4. Open your browser and navigate to http://localhost:1313.
+
+Instead of **Step 3** you can generate the public directory as follows:
+```bash
+hugo --cleanDestinationDir --minify
+```
 
 ## License 📜
 MarkyBrief is licensed under the [MIT License](https://mit-license.org/).
@@ -28,4 +37,4 @@ MarkyBrief is licensed under the [MIT License](https://mit-license.org/).
 If you encounter any issues or have suggestions, please open an issue or reach out on the Discussions tab.
 
 ## TODO 📋
-- [ ] Add ?
+- [ ] Switch to Dart Sass
