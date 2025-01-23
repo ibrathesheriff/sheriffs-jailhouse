@@ -1,0 +1,20 @@
+$section-margin: 10%;
+
+.page-header {
+    &__left-section {
+        margin-left: $section-margin;
+    }
+
+    &__right-section {
+        margin-right: $section-margin;
+
+        nav {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            a {
+                text-align: center;
+            }
+        }
+    }
+}
