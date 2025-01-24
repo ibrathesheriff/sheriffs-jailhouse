@@ -8,6 +8,8 @@ Welcome to the Sheriff's Jailhouse! This repository serves as the HQ for my pers
 - **Fast and Lightweight**: Built with Hugo for lightning-fast performance.
 
 ## Getting Started 🛠️
+
+## Install and Run
 To run the site locally:
 1. **Clone the repository**:
     ```bash
@@ -28,6 +30,12 @@ To run the site locally:
 Instead of **Step 3** you can generate the public directory as follows:
 ```bash
 hugo --cleanDestinationDir --minify
+```
+
+## Create a post
+Run the following command to create a new blog post:
+```bash
+hugo new posts/new-post.md
 ```
 
 ## License 📜
