@@ -1,6 +1,13 @@
 <header class="left-right-box green-box">
     <div class="left-right-box__left page-header__left-section">
-        <a href="/" class="green-anchor">{{ site.Title }} ~ $</a>
+        <a href="/" class="green-anchor">{{ site.Title }} ~ $
+            {{ $var := .IsHome }}
+            {{ if $var }}
+            <span class="blink-animation">_</span>
+            {{ else }}
+            <span class="sheriff-white-text">ls {{ print .RelPermalink }}</span>
+            {{ end }}
+        </a>
     </div>
     <div class="left-right-box__right page-header__right-section">
         <nav>
