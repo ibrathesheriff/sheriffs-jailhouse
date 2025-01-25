@@ -9,3 +9,79 @@
 .hidden-block {
     display: none;
 }
+
+.landing-content {
+    height: 50vh;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    /* Center the container */
+    margin: 0 auto;
+    /* Add vertical scrollbar when content exceeds height */
+    overflow-y: auto;
+}
+
+.post-box {
+    flex: 0 0 calc(33.333% - 20px);
+    box-sizing: border-box;
+    height: 40%;
+
+    @media (max-width: 768px) {
+        /* Switch to 2 columns */
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    @media (max-width: 480px) {
+        /* Switch to 1 column */
+        flex: 1 1 100%;
+    }
+}
+
+.post-metadata {
+    padding-top: 10%;
+
+    h2 {
+        margin: 0;
+    }
+
+    p {
+        color: var(--sheriff-white);
+        font-size: 0.8em;
+    }
+}
+
+.post-metadata h2, .post-metadata p, .post-metadata a {
+    display: -webkit-box;
+    /* Number of lines to display */
+    -webkit-line-clamp: 2;
+    /* Set box orientation to vertical */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-page-content-container {
+    padding-right: var(--green-box-padding-right);
+    padding-left: var(--green-box-padding-left);
+    padding-top: var(--green-box-padding-top);
+    padding-bottom: var(--green-box-padding-bottom);
+}
+
+.post-metadata-header {
+    color: var(--sheriff-green);
+
+    h1 {
+        font-size: 2.125em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}

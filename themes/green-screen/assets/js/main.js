@@ -23,6 +23,7 @@ function incrementProgressBar(currentProgressPosition, progressBar, numSections)
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
+    // handle the progress bar
     const progressBar = document.getElementById("progress-bar");
     if (progressBar !== null) {
         const progressBarInfo = document.getElementById("progress-bar-info");
@@ -33,9 +34,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let lastTime = 0;
         let currentSheriffIs = 0;
 
-        const sheriffIsList = ["Code Educator", "Dev", "Tutor", "Web Developer", "Pythoneer", 
-            "Problem-Solver", "Java", "C", "NASM", "HTML/CSS", "JavaScript", "Python", "Numpy", 
-            "Flask", "Tornado", "Vue.js", "MySQL", "MariaDB", "SQLAlchemy", "Maven", "Git", "Bash", 
+        const sheriffIsList = ["Code Educator", "Dev", "Tutor", "Web Developer", "Pythoneer",
+            "Problem-Solver", "Java", "C", "NASM", "HTML/CSS", "JavaScript", "Python", "Numpy",
+            "Flask", "Tornado", "Vue.js", "MySQL", "MariaDB", "SQLAlchemy", "Maven", "Git", "Bash",
             "Twilio", "Pythonanywhere", "DigitalOcean"];
 
         function step(timeStamp) {

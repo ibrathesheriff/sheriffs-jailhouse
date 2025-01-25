@@ -1,19 +1,26 @@
 {{ define "main" }}
-<article class="post">
-    <header>
-        <h2>{{ .Title }}</h2>
+<article class="post-page-content-container">
+    <header class="post-metadata-header">
+        <h1>{{ .Title }}</h1>
         <p>
-            By {{ .Params.Author }}
+            <strong>published</strong>: {{ .Date.Format "January 2, 2006" }}
+            <br>
+            <strong>tags</strong>: {{ range .Params.tags }}
+            <a class="green-anchor" href="/tags/{{ . | urlize }}">{{ . }}</a> |
+            {{ end }}
+            <br>
+            <strong>reading time</strong>: <strong>{{ math.Round (div (countwords .Content) 200.0) }}</strong> minutes
         </p>
         <p>
-            Posted {{ .Date.Format "January 2, 2006" }}
-        </p>
-        <p>
-            Reading time: {{ math.Round (div (countwords .Content) 200.0) }} minutes.
+            by <strong>@{{ .Params.Author }}</strong> <a target="_blank" href="https://x.com/ibrathesheriff">
+                <img class="img-icon-large" src="img/icons/small/twitter.png" alt="ibrathesheriff x/twitter icon">
+            </a>
         </p>
     </header>
-    <section class="body">
-        {{ .Content }}
+    <section>
+        <div class="markdown-container">
+            {{ .Content }}
+        </div>
     </section>
 </article>
 {{ end }}

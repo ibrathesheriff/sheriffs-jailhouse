@@ -6,7 +6,7 @@ html {
 
 *, *::before, *::after {
     box-sizing: inherit;
-    font-family: var(--main-font);
+    font-family: var(--sheriff-font);
 }
 
 body {
@@ -34,10 +34,10 @@ body {
 /* the thumb the user moves */
 ::-webkit-scrollbar-thumb {
     width: 5px;
-    background: var(--text-grey); 
+    background: var(--sheriff-grey); 
 }
 
 ::-webkit-scrollbar-thumb:hover {
     width: 7.5px;
-    background: var(--text-light-gray); 
+    background: var(--sheriff-light-grey); 
 }

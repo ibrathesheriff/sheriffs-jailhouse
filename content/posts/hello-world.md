@@ -20,6 +20,9 @@ Funny enough I first setup my personal site [ibrathesheriff.com](https://ibrathe
 
 But still, I haven't been able to commit to the idea of maintaining a website to share my personal experiences, ideas, and thoughts on things. So why now?
 
++ A place to dump ideas - empty my head
++ We didn't know. A place to add information so it is accessible.
+
 So here goes nothing!
 
 ```c

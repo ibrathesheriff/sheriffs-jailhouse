@@ -38,6 +38,12 @@ Run the following command to create a new blog post:
 hugo new posts/new-post.md
 ```
 
+## Change the Code Highlighting Style
+Navigate to the [Chroma Style Gallery](https://xyproto.github.io/splash/docs/all.html) and select a code highlighting style e.g. dracula and then run:
+```bash
+hugo gen chromastyles --style=dracula > themes/green-screen/assets/sass/components/_code_blocks.scss
+```
+
 ## License 📜
 MarkyBrief is licensed under the [MIT License](https://mit-license.org/).
 
@@ -45,4 +51,7 @@ MarkyBrief is licensed under the [MIT License](https://mit-license.org/).
 If you encounter any issues or have suggestions, please open an issue or reach out on the Discussions tab.
 
 ## TODO 📋
+- [ ] Select a main font for the site
 - [ ] Switch to Dart Sass
+- [ ] Remove the last '|' from the tags display on posts
+- [ ] Fix broken image links on the posts page

@@ -1,9 +1,15 @@
 .green-box {
-    border: 1px solid var(--sheriff-green);
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    border: 2px solid var(--sheriff-green);
+    border-radius: var(--box-border-radius);
+    padding-right: var(--green-box-padding-right);
+    padding-left: var(--green-box-padding-left);
+    padding-top: var(--green-box-padding-top);
+    padding-bottom: var(--green-box-padding-bottom);
+    box-shadow: 1px 0px 5px var(--sheriff-green);
+}
+
+.orange-shadow {
+    box-shadow: 1px 0px 5px var(--sheriff-orange);
 }
 
 .dotted-box {

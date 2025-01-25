@@ -2,14 +2,24 @@
     /*
      * COLOURS 
      */
-    --background-color: #071404; /* rgb(7, 20, 4)#0c2207 */
+    --background-color: #071404; /* rgb(7, 20, 4) */
+    --neon-background-color: #1c4811;  /* rgb(28, 72, 17) */
     --sheriff-green: #5ec12d;  /* rgb(94, 193, 45) */
+    --sheriff-orange: #d9793a;  /* rgb(217, 121, 58) */
     --sheriff-light-green: #7dde4e;  /* rgb(125, 222, 78) */
+    --sheriff-super-bright-green: #0f0;
     --sheriff-grey: #4D4C4D;  /* rgb(77, 76, 77) */
+    --sheriff-light-grey: #7c797c;
+    --sheriff-white: #edf4ed;  /* rgb(237, 244, 237) */
+    --sheriff-black: #000000;  /* rgb(0, 0, 0) */
     /*
      * MEASUREMENTS 
      */
-    --dashboard-border-thickness: 1px;
+    --box-border-radius: 8px;
+    --green-box-padding-top: 20px;
+    --green-box-padding-bottom: 20px;
+    --green-box-padding-left: 20px;
+    --green-box-padding-right: 20px;
     /*
      * CURSORS 
      */

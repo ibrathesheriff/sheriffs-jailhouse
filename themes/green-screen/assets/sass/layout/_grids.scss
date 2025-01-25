@@ -16,7 +16,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw; 
+    width: 100vw;
     height: 100vh;
     margin: 0;
+}
+
+.two-column-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &__column {
+        flex: 50%;
+    }
+
+    &__column--20 {
+        flex: 20%;
+    }
+
+    &__column--80 {
+        flex: 80%;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 }

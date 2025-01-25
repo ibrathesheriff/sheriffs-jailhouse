@@ -14,4 +14,48 @@ a,
 a:visited,
 a:active {
     text-decoration: none;
+    cursor: var(--pointer-cursor);
+}
+
+.ellipsis-text {
+    /* Use a flexible box model for multi-line truncation */
+    display: -webkit-box;
+    /* Number of lines to display */
+    -webkit-line-clamp: 2;
+    /* Set box orientation to vertical */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.green-anchor {
+    color: var(--sheriff-green);
+    transition: all 0.3s ease-in-out;
+    /* Smooth hover effect */
+    text-shadow: 0px 0px 10px var(--sheriff-green);
+}
+
+.green-anchor:hover {
+    color: var(--sheriff-black);
+    background-color: var(--sheriff-light-green);
+    padding: 2px 5px;
+    text-shadow: none;
+    box-shadow: 0 0 10px var(--sheriff-light-green), inset 0 0 5px var(--sheriff-black);
+    border-radius: var(--box-border-radius);
+}
+
+.orange-anchor {
+    color: var(--sheriff-orange);
+}
+
+.orange-anchor:hover {
+    color: var(--sheriff-white);
+}
+
+.white-anchor {
+    color: var(--sheriff-white);
+}
+
+.white-anchor:hover {
+    color: var(--sheriff-orange);
 }
