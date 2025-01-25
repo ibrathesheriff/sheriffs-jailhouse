@@ -1,0 +1,26 @@
+{{ define "main" }}
+<article class="post-page-content-container">
+    <header class="post-metadata-header--orange">
+        <h1>{{ .Title }}</h1>
+        <p>
+            <strong>published</strong>: {{ .Date.Format "January 2, 2006" }}
+            <br>
+            <strong>tags</strong>: {{ range .Params.tags }}
+            <a class="neon-orange-anchor" href="/tags/{{ . | urlize }}">{{ . }}</a> |
+            {{ end }}
+            <br>
+            <strong>reading time</strong>: <strong>{{ math.Round (div (countwords .Content) 200.0) }}</strong> minutes
+        </p>
+        <p>
+            by <strong>@{{ .Params.Author }}</strong> <a target="_blank" href="https://x.com/ibrathesheriff">
+                <img class="img-icon-large" src="img/icons/small/twitter.png" alt="ibrathesheriff x/twitter icon">
+            </a>
+        </p>
+    </header>
+    <section>
+        <div class="markdown-container">
+            {{ .Content }}
+        </div>
+    </section>
+</article>
+{{ end }}
