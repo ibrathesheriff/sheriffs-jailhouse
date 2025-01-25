@@ -38,6 +38,12 @@ Run the following command to create a new blog post:
 hugo new posts/new-post.md
 ```
 
+## Create a note
+Run the following command to create a new note document:
+```bash
+hugo new notes/new-note.md
+```
+
 ## Change the Code Highlighting Style
 Navigate to the [Chroma Style Gallery](https://xyproto.github.io/splash/docs/all.html) and select a code highlighting style e.g. dracula and then run:
 ```bash
@@ -55,3 +61,5 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Switch to Dart Sass
 - [ ] Remove the last '|' from the tags display on posts
 - [ ] Fix broken image links on the posts page
+- [ ] Update the post and note summary system.
+- [ ] Fix the changelog 

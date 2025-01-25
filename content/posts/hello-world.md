@@ -3,6 +3,7 @@ title: "Hello, World? I guess..."
 date: 2025-01-24T23:19:03+02:00
 draft: false
 author: ibrathesheriff
+description: "This is a post about..."
 categories:
 - Personal
 - Thoughts
