@@ -212,9 +212,13 @@ So far, you've placed all of your layout files into your Hugo site's layouts dir
 
 A basic Hugo theme only needs these files:
 layouts
+
 |-------default
+
         |---- list.html
+
         |---- single.html
+
 |-------index.html
 
 ### Generating the Theme

@@ -62,4 +62,5 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Remove the last '|' from the tags display on posts
 - [ ] Fix broken image links on the posts page
 - [ ] Update the post and note summary system.
-- [ ] Fix the changelog 
+- [ ] Fix the changelog
+- [ ] Add key bindings on the home page to allow navigating using just the keyboard

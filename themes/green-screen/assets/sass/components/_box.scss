@@ -8,6 +8,10 @@
     box-shadow: 1px 0px 5px var(--sheriff-green);
 }
 
+.green-shadow--hover:hover {
+    box-shadow: 2px 0px 10px var(--sheriff-light-green);
+}
+
 .orange-box {
     border: 2px solid var(--sheriff-orange);
     border-radius: var(--box-border-radius);
@@ -20,6 +24,10 @@
 
 .orange-shadow {
     box-shadow: 1px 0px 5px var(--sheriff-orange);
+}
+
+.orange-shadow--hover:hover {
+    box-shadow: 2px 0px 10px var(--sheriff-light-orange);
 }
 
 .dotted-box {

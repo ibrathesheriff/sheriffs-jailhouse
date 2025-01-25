@@ -31,7 +31,7 @@
 .post-box {
     flex: 0 0 calc(33.333% - 20px);
     box-sizing: border-box;
-    height: 40%;
+    height: 42%;
 
     @media (max-width: 768px) {
         /* Switch to 2 columns */
@@ -45,15 +45,29 @@
 }
 
 .post-metadata {
-    padding-top: 10%;
+    padding-top: 5%;
 
     h2 {
         margin: 0;
+        font-size: 1.3em;
     }
 
     p {
+        padding-top: 2.5%;
         color: var(--sheriff-white);
         font-size: 0.8em;
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            margin-top: 2.5%;
+            font-size: 1.1em;
+        }
+
+        p {
+            font-size: 0.6em;
+            padding-top: 5%;
+        }
     }
 }
 

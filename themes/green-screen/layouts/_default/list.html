@@ -1,8 +1,24 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <main class="landing-content green-box">
+    <div class="posts-container">
+      {{ range .Pages }}
+      <div class="two-column-box green-box post-box green-shadow--hover">
+        <div class="two-column-box__column--20">
+          <a href="{{ .RelPermalink }}">
+            <img src="{{ "img/icons/medium/silo-hard-drive-file.png" | absURL }}"
+              class="orange-shadow orange-shadow--hover image-width-60">
+          </a>
+        </div>
+        <div class="two-column-box__column--80">
+          <div class="post-metadata">
+            <h2>
+              <a href="{{ .RelPermalink }}" class="white-anchor">{{ .Title }}</a>
+            </h2>
+            <p>{{ .Description }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </main>
 {{ end }}

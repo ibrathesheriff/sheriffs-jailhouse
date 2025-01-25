@@ -5,7 +5,19 @@
             {{ if $var }}
             <span class="blink-animation">_</span>
             {{ else }}
-            <span class="sheriff-white-text">ls {{ print .RelPermalink }}</span>
+            {{ $s := slice "a" "b" "c" }}
+            {{ $pathParts := split .RelPermalink "/" }} <!-- Split the URL path into parts -->
+            {{ $lastPart := index $pathParts 0 }} <!-- Get the last part of the path -->
+            {{ $pathIndex := (sub (len $pathParts) 2) }}
+            <span class="sheriff-white-text">
+                <!-- "ls" for folders (posts, notes etc.), "cat" for documents -->
+                {{ if eq $pathIndex 1 }}
+                ls
+                {{ else }}
+                cat
+                {{ end }}
+                {{ index $pathParts $pathIndex}}{{ if eq $pathIndex 1 }}/{{ else }}.md{{ end }}<!-- and then add the end of the command -->
+            </span>
             {{ end }}
         </a>
     </div>

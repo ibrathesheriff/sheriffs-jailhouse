@@ -21,20 +21,23 @@
       <main class="landing-content green-box">
         <div class="posts-container">
           {{ range (where .Site.RegularPages "Type" "in" "posts") }}
-        <div class="two-column-box green-box post-box">
-          <div class="two-column-box__column--20">
-            <img src="img/icons/medium/silo-hard-drive-file.png" class="orange-shadow image-width-60">
-          </div>
-          <div class="two-column-box__column--80">
-            <div class="post-metadata">
-              <h2>
-                <a href="{{ .RelPermalink }}" class="white-anchor">{{ .Title }}</a>
-              </h2>
-              <p>{{ .Summary }}</p>
+          <div class="two-column-box green-box post-box green-shadow--hover">
+            <div class="two-column-box__column--20">
+              <a href="{{ .RelPermalink }}">
+                <img src="img/icons/medium/silo-hard-drive-file.png"
+                  class="orange-shadow orange-shadow--hover image-width-60">
+              </a>
+            </div>
+            <div class="two-column-box__column--80">
+              <div class="post-metadata">
+                <h2>
+                  <a href="{{ .RelPermalink }}" class="white-anchor">{{ .Title }}</a>
+                </h2>
+                <p>{{ .Description }}</p>
+              </div>
             </div>
           </div>
-        </div>
-        {{ end }}
+          {{ end }}
         </div>
         {{ block "main" . }}{{ end }}
       </main>
