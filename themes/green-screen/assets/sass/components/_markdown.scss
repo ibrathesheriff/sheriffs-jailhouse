@@ -69,6 +69,28 @@
         font-size: 1.2em;
     }
 
+    blockquote {
+        border-left: 8px solid var(--sheriff-green);
+        padding-left: 2.5%;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        background-color: var(--neon-background-color);
+        quotes: "\201C" "\201D" "\2018" "\2019";
+    }
+
+    blockquote:before {
+        color: var(--sheriff-green);
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+
+    blockquote p {
+        display: inline;
+    }
+
     pre {
         position: relative;
         margin-top: 1%;

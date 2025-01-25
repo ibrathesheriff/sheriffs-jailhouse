@@ -1,17 +1,34 @@
 <footer class="page-footer green-box">
-    <div class="two-column-box">
+    <div id="display-footer">
+        <div class="sheriff-green-text">
+            Copyright &copy; {{ now.Year }}. All rights reserved. <span class="triangle-arrow__green" id="expand-footer-button">&#11167;</span>
+        </div>
+    </div>
+    <div class="two-column-box" style="display: none;" id="expanded-footer">
         <div class="two-column-box__column--80">
             <div class="page-footer__section">
-                Find an issue with this page? <a href="https://github.com/ibrathesheriff/sheriffs-jailhouse" class="orange-anchor">Fix it on
+                Find an issue with this page? <a href="https://github.com/ibrathesheriff/sheriffs-jailhouse"
+                    class="orange-anchor">Fix it on
                     GitHub</a>
             </div>
-        
+
             <div class="page-footer__section">
-                Need help? Email <a target="_blank" href="thesheriff@ibrathesheriff.com" class="white-anchor"><strong>thesheriff@ibrathesheriff.com</strong></a>
+                Need help? Email <a target="_blank" href="thesheriff@ibrathesheriff.com"
+                    class="white-anchor"><strong>thesheriff@ibrathesheriff.com</strong></a>
             </div>
-        
+
+            <div class="page-footer__section sheriff-green-text">
+                <a href="/" class="green-anchor">home</a> | 
+                <a href="/changelog" class="green-anchor">changelog</a> |
+                <a href="/credits" class="green-anchor">credits</a>
+            </div>
+
             <div class="page-footer__section">
-                Copyright &copy; {{ now.Year }}. All rights reserved.
+                Powered by <a target="_blank" href="https://gohugo.io/" class="orange-anchor">Hugo</a>
+            </div>
+
+            <div class="page-footer__section">
+                Copyright &copy; {{ now.Year }}. All rights reserved. <span class="triangle-arrow__green" id="shrink-footer-button">&#11165;</span>
             </div>
         </div>
 

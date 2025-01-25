@@ -17,6 +17,10 @@ a:active {
     cursor: var(--pointer-cursor);
 }
 
+.sheriff-green-text {
+    color: var(--sheriff-green);
+}
+
 .ellipsis-text {
     /* Use a flexible box model for multi-line truncation */
     display: -webkit-box;
@@ -41,6 +45,22 @@ a:active {
     padding: 2px 5px;
     text-shadow: none;
     box-shadow: 0 0 10px var(--sheriff-light-green), inset 0 0 5px var(--sheriff-black);
+    border-radius: var(--box-border-radius);
+}
+
+.neon-orange-anchor {
+    color: var(--sheriff-orange);
+    transition: all 0.3s ease-in-out;
+    /* Smooth hover effect */
+    text-shadow: 0px 0px 10px var(--sheriff-orange);
+}
+
+.neon-orange-anchor:hover {
+    color: var(--sheriff-black);
+    background-color: var(--sheriff-light-orange);
+    padding: 2px 5px;
+    text-shadow: none;
+    box-shadow: 0 0 10px var(--sheriff-light-orange), inset 0 0 5px var(--sheriff-black);
     border-radius: var(--box-border-radius);
 }
 

@@ -8,6 +8,16 @@
     box-shadow: 1px 0px 5px var(--sheriff-green);
 }
 
+.orange-box {
+    border: 2px solid var(--sheriff-orange);
+    border-radius: var(--box-border-radius);
+    padding-right: var(--green-box-padding-right);
+    padding-left: var(--green-box-padding-left);
+    padding-top: var(--green-box-padding-top);
+    padding-bottom: var(--green-box-padding-bottom);
+    box-shadow: 1px 0px 5px var(--sheriff-orange);
+}
+
 .orange-shadow {
     box-shadow: 1px 0px 5px var(--sheriff-orange);
 }

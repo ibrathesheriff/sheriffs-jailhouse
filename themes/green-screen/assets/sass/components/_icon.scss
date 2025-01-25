@@ -1,3 +1,20 @@
 .img-icon-large {
     width: 24px;
 }
+
+.triangle-arrow {
+    font-size: 1em;
+    padding: 3px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.triangle-arrow__green {
+    @extend .triangle-arrow;
+    color: var(--sheriff-green);
+    border-color: var(--sheriff-green);
+}
+
+.triangle-arrow__green:hover {
+    background-color: var(--sheriff-grey);
+}

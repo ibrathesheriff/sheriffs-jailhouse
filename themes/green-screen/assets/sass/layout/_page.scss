@@ -11,7 +11,7 @@
 }
 
 .landing-content {
-    height: 50vh;
+    height: 58vh;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 }
@@ -84,4 +84,9 @@
     p {
         font-size: 1em;
     }
+}
+
+.post-metadata-header--orange {
+    @extend .post-metadata-header;
+    color: var(--sheriff-orange);
 }

@@ -23,6 +23,19 @@ function incrementProgressBar(currentProgressPosition, progressBar, numSections)
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
+    // handle the footer
+    const displayFooter = document.getElementById("display-footer");
+    const expandedFooter = document.getElementById("expanded-footer");
+    const expandFooterButton = document.getElementById("expand-footer-button");
+    const shrinkFooterButton = document.getElementById("shrink-footer-button");
+    expandFooterButton.addEventListener("click", () => {
+        displayFooter.style.display = "none";
+        expandedFooter.style.display = "flex";
+    });
+    shrinkFooterButton.addEventListener("click", () => {
+        displayFooter.style.display = "block";
+        expandedFooter.style.display = "none";
+    });
     // handle the progress bar
     const progressBar = document.getElementById("progress-bar");
     if (progressBar !== null) {
