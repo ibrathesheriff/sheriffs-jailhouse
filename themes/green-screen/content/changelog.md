@@ -1,8 +1,9 @@
 ---
-title: "Changelog"
-date: 2025-01-24T23:19:03+02:00
+title: "Version"
 draft: false
 author: ibrathesheriff
+description: "Who is ibrathesheriff?"
+layout: "changelog"
 ---
 Welcome to the changelog of my personal site. Dive into the recent updates and improvements made to the [ibrathesheriff.com](https://ibrathesheriff.com/). This changelog details new features, bug fixes, and enhancements related to the site's functionality and codebase.
 
