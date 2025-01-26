@@ -64,3 +64,4 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Update the post and note summary system.
 - [ ] Fix the changelog
 - [ ] Add key bindings on the home page to allow navigating using just the keyboard
+- [ ] Add a "help" command which explains the workings of the available commands

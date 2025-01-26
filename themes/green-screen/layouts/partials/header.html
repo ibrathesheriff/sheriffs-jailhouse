@@ -3,20 +3,20 @@
         <a href="/" class="green-anchor">{{ site.Title }} ~ $
             {{ $var := .IsHome }}
             {{ if $var }}
-            <span class="blink-animation">_</span>
+            <span class="blink-animation" id="bash-command">__</span>
             {{ else }}
             {{ $s := slice "a" "b" "c" }}
             {{ $pathParts := split .RelPermalink "/" }} <!-- Split the URL path into parts -->
             {{ $lastPart := index $pathParts 0 }} <!-- Get the last part of the path -->
             {{ $pathIndex := (sub (len $pathParts) 2) }}
-            <span class="sheriff-white-text">
+            <span class="sheriff-white-text" id="bash-command">
                 <!-- "ls" for folders (posts, notes etc.), "cat" for documents -->
                 {{ if eq $pathIndex 1 }}
                 ls
                 {{ else }}
                 cat
                 {{ end }}
-                {{ index $pathParts $pathIndex}}{{ if eq $pathIndex 1 }}/{{ else }}.md{{ end }}<!-- and then add the end of the command -->
+                {{ .RelPermalink | strings.TrimSuffix "/" }}{{ if eq $pathIndex 1 }}/{{ else }}.md{{ end }}<!-- and then add the end of the command -->
             </span>
             {{ end }}
         </a>
