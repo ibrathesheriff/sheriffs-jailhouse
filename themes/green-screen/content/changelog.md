@@ -3,7 +3,7 @@ title: "Version"
 draft: false
 author: ibrathesheriff
 description: "Who is ibrathesheriff?"
-layout: "changelog"
+layout: "markdown-doc"
 ---
 Welcome to the changelog of my personal site. Dive into the recent updates and improvements made to the [ibrathesheriff.com](https://ibrathesheriff.com/). This changelog details new features, bug fixes, and enhancements related to the site's functionality and codebase.
 

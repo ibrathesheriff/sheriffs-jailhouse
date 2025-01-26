@@ -44,6 +44,12 @@ Run the following command to create a new note document:
 hugo new notes/new-note.md
 ```
 
+## Create a project
+Run the following command to create a new note document:
+```bash
+hugo new projects/new-project.md
+```
+
 ## Change the Code Highlighting Style
 Navigate to the [Chroma Style Gallery](https://xyproto.github.io/splash/docs/all.html) and select a code highlighting style e.g. dracula and then run:
 ```bash
@@ -62,6 +68,6 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Remove the last '|' from the tags display on posts
 - [ ] Fix broken image links on the posts page
 - [ ] Update the post and note summary system.
-- [ ] Fix the changelog
+- [ ] Complete the changelog
 - [ ] Add key bindings on the home page to allow navigating using just the keyboard
 - [ ] Add a "help" command which explains the workings of the available commands
