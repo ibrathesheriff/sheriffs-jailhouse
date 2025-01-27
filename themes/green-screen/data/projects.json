@@ -1,0 +1,14 @@
+{
+    "current": [
+        {
+            "name": "hackthedegree",
+            "url": "/projects/hackthedegree",
+            "description": "The modern-day tutoring service for programming students."
+        },
+        {
+            "name": "hacker bytes",
+            "url": "/projects/hacker-bytes",
+            "description": "The official blog of hackthedegree, where unconventional learning methods collide with your coding aspirations!"
+        }
+    ]
+}

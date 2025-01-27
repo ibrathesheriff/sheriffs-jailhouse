@@ -14,6 +14,30 @@
     </div>
 
     <section>
+        <h2 class="markdown-subheading">ongoing projects</h2>
+        <div class="posts-container">
+            {{ range .Site.Data.projects.current }}
+            <div class="two-column-box green-box post-box green-shadow--hover">
+                <div class="two-column-box__column--20">
+                  <a href="{{ .url }}">
+                    <img src="{{ "img/icons/medium/silo-hard-drive-file.png" | absURL }}"
+                      class="orange-shadow orange-shadow--hover image-width-60">
+                  </a>
+                </div>
+                <div class="two-column-box__column--80">
+                  <div class="post-metadata">
+                    <h2>
+                      <a href="{{ .url }}" class="white-anchor">{{ .name }}</a>
+                    </h2>
+                    <p>{{ .description }}</p>
+                  </div>
+                </div>
+              </div>
+              {{ end }}
+        </div>
+    </section>
+
+    <section>
         <div class="markdown-container" id="about-me-markdown">
             {{ .Content }}
         </div>

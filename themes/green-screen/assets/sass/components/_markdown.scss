@@ -3,6 +3,22 @@
     color: var(--sheriff-green);
 }
 
+.markdown-heading-setup {
+    color: var(--sheriff-orange);
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+
+    @media (max-width: 768px) {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+.markdown-subheading {
+    @extend .markdown-heading-setup;
+    font-size: 1.875em;
+}
+
 .markdown-container {
     color: var(--sheriff-white);
 
@@ -12,9 +28,7 @@
     h4,
     h5,
     h6 {
-        color: var(--sheriff-orange);
-        margin-top: 5%;
-        margin-bottom: 5%;
+        @extend .markdown-heading-setup;
     }
 
     h1 {
@@ -54,8 +68,10 @@
     }
 
     p img {
-        width: 100%;
+        width: 60%;
         margin-bottom: 5%;
+        display: block;
+        margin: auto;
     }
 
     p {
