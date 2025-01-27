@@ -16,6 +16,8 @@ keywords:
 ---
 These notes are written based on learnings from the book [Build Websites using Hugo](https://pragprog.com/titles/bhhugo/build-websites-with-hugo/) by Brian P. Hogan which was listed on the [External Learning Resources](https://gohugo.io/getting-started/external-learning-resources/) page on the official Hugo website.
 
+![Build Websites using Hugo Cover Page](/notes/learning/build-websites-with-hugo-cover-page.jpg)
+
 ## Why this book?
 I first learned how to create a static site using Hugo through the [official documentation](https://gohugo.io/getting-started/quick-start/). It’s an excellent starting point, and if you’re a web developer, you can have a site up and running in just an afternoon.
 

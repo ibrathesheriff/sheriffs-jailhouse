@@ -71,3 +71,6 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Complete the changelog
 - [ ] Add key bindings on the home page to allow navigating using just the keyboard
 - [ ] Add a "help" command which explains the workings of the available commands
+- [ ] Improve the display of tags and categories
+- [ ] Setup a monospace font for the site
+- [ ] Add black border around the revolver cursor graphic

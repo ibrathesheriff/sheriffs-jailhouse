@@ -24,6 +24,8 @@ But still, I haven't been able to commit to the idea of maintaining a website to
 + A place to dump ideas - empty my head
 + We didn't know. A place to add information so it is accessible.
 
+Links: https://dsokolovskiy.com/blog/all/why-you-should-run-a-blog/, https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045, https://www.guidefari.com/why-write/, https://www.youtube.com/watch?v=dnE7c0ELEH8&t=169s
+
 So here goes nothing!
 
 ```c
