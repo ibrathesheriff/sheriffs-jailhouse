@@ -108,18 +108,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             bashCommandContainer.innerHTML = currentText + keyPressed;
         }
     });
-    // handle the about me
-    /*const aboutMeHeading = document.getElementById("about-me-heading");
-    if (aboutMeHeading !== null) {
-        const aboutMeMarkdown = document.getElementById("about-me-markdown");
-        const firstParagraph = aboutMeMarkdown.querySelector("p");
-        firstParagraph.classList.add("sheriff-about-intro");
-        headlineSpans = firstParagraph.querySelectorAll("strong");
-
-        headlineSpans.forEach(span => {
-            span.classList.add("sheriff-headline-point");
-        });
-    }*/
 
     // handle the progress bar
     const progressBar = document.getElementById("progress-bar");
