@@ -1,7 +1,20 @@
 {{ define "main" }}
 <article class="post-page-content-container">
+    <div class="about-me-headline-container">
+        <h1 class="markdown-title" id="about-me-heading">
+            Hello, I'm <span class="about-me-author sheriff-green-text-shadow">{{ .Params.Author}}</span> a.k.a <span class="about-me-author sheriff-green-text-shadow">{{ .Params.Nickname }}</span>
+            <p class="headline-paragraph">
+                <span class="about-me-role">Coding Educator</span> <span class="sheriff-orange-text">|</span> <span class="about-me-role">Software Developer</span>
+            </p>
+            <p class="about-me-headline-bio">{{ .Params.Headline }}</p>
+            </h1>
+
+        <img src="{{ "img/landing/thesheriff.png" | absURL }}" alt="An image the Sheriff - ibrathesheriff"
+            class="centered-image">
+    </div>
+
     <section>
-        <div class="markdown-container">
+        <div class="markdown-container" id="about-me-markdown">
             {{ .Content }}
         </div>
     </section>

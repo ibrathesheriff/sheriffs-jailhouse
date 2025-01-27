@@ -37,19 +37,23 @@ function checkCommand(commandEntered) {
         return false;
     }
 
-    let found = false;
-    for (let i = 0; i < commandOptions.length; i++) {
-        if (commandParts.includes(commandOptions[i])) {
-            found = true;
-            break;
-        }
-    }
     // commands must use a valid supported bash option
-    if (!found) {
+    console.log(commandOptions.includes(commandParts[0]));
+    if (!commandOptions.includes(commandParts[0])) {
         return false;
     }
 
     return true;
+}
+
+const commandKeysToIgnore = ["Control", "Shift"];
+function ignoreCommandKey(keyEntered) {
+    for (let i = 0; i < commandKeysToIgnore.length; i++) {
+        if (commandKeysToIgnore.includes(keyEntered)) {
+            return true;
+        }
+    }
+    return false;
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -98,10 +102,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
             if (currentText.length > 0) {
                 bashCommandContainer.innerHTML = currentText.substring(0, currentText.length - 1);
             }
+        } else if (ignoreCommandKey(keyPressed)) {
+            // do nothing
         } else {
             bashCommandContainer.innerHTML = currentText + keyPressed;
         }
     });
+    // handle the about me
+    /*const aboutMeHeading = document.getElementById("about-me-heading");
+    if (aboutMeHeading !== null) {
+        const aboutMeMarkdown = document.getElementById("about-me-markdown");
+        const firstParagraph = aboutMeMarkdown.querySelector("p");
+        firstParagraph.classList.add("sheriff-about-intro");
+        headlineSpans = firstParagraph.querySelectorAll("strong");
+
+        headlineSpans.forEach(span => {
+            span.classList.add("sheriff-headline-point");
+        });
+    }*/
+
     // handle the progress bar
     const progressBar = document.getElementById("progress-bar");
     if (progressBar !== null) {

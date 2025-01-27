@@ -3,9 +3,11 @@ title: "About Me"
 draft: false
 author: ibrathesheriff
 nickname: "ibra"
-description: "Who is ibrathesheriff?"
+description: "Code Educator | Software Developer"
+headline: "I teach students how to code and build web apps during my spare time."
 layout: "about"
 ---
+## Aha moment...
 Building a **Sudoku game in Java sparked a passion** for programming I never knew I had. Something about breaking down the game into modules, functions and loops **made me feel something I cannot explain**. Now I'm dedicated to **helping others experience that same "aha!" moment**.
 
 ## What I can offer

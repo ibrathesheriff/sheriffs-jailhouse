@@ -76,7 +76,9 @@
     }
 }
 
-.post-metadata h2, .post-metadata p, .post-metadata a {
+.post-metadata h2,
+.post-metadata p,
+.post-metadata a {
     display: -webkit-box;
     /* Number of lines to display */
     -webkit-line-clamp: 2;
@@ -110,17 +112,57 @@
     color: var(--sheriff-orange);
 }
 
-.about-me-author {
-    border-bottom: var(--box-border-radius-50) solid var(--sheriff-green);
-    padding-bottom: 0.25%;
+.about-me-headline-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    h1 {
+        width: 50%;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .headline-paragraph {
+        margin-bottom: 0;
+    }
+
+    .about-me-role {
+        font-size: 0.60em;
+        color: var(--sheriff-orange);
+    }
+
+    .about-me-headline-bio {
+        font-size: 0.40em;
+        color: var(--sheriff-orange);
+    }
 
     @media (max-width: 768px) {
-        line-height: 1.5;
+        display: block;
+
+        .about-me-role {
+            font-size: 0.5em;
+        }
+
+        h1 {
+            line-height: 1.5;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .headline-paragraph {
+            margin-bottom: 2.5%;
+        }
     }
 }
 
+.about-me-author {
+    border-bottom: var(--box-border-radius-50) solid var(--sheriff-green);
+    padding-bottom: 0.25%;
+}
+
 .sheriff-about-intro {
-    color: var(--sheriff-white);
+    color: var(--sheriff-orange);
     line-height: 1.8;
 }
 

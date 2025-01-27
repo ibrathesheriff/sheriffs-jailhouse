@@ -29,6 +29,14 @@ a:active {
     color: var(--sheriff-white);
 }
 
+.sheriff-green-text-shadow {
+    text-shadow: 0px 0px 10px var(--sheriff-green);
+}
+
+.sheriff-orange-text-shadow {
+    text-shadow: 0px 0px 10px var(--sheriff-orange);
+}
+
 .ellipsis-text {
     /* Use a flexible box model for multi-line truncation */
     display: -webkit-box;
