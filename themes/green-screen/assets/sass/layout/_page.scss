@@ -14,6 +14,11 @@
     height: 58vh;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
+
+    @media (max-width: 768px) {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
 }
 
 .posts-container {
@@ -103,4 +108,24 @@
 .post-metadata-header--orange {
     @extend .post-metadata-header;
     color: var(--sheriff-orange);
+}
+
+.about-me-author {
+    border-bottom: var(--box-border-radius-50) solid var(--sheriff-green);
+    padding-bottom: 0.25%;
+
+    @media (max-width: 768px) {
+        line-height: 1.5;
+    }
+}
+
+.sheriff-about-intro {
+    color: var(--sheriff-white);
+    line-height: 1.8;
+}
+
+.sheriff-headline-point {
+    color: var(--sheriff-green);
+    font-style: italic;
+    font-size: 120%;
 }

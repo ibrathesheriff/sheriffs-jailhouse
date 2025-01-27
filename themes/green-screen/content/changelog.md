@@ -1,5 +1,5 @@
 ---
-title: "Version"
+title: "Changelog"
 draft: false
 author: ibrathesheriff
 description: "Who is ibrathesheriff?"
