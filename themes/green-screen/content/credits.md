@@ -23,7 +23,7 @@ Thank you to these designers for putting their work out there for free! Your bea
 
 ### Currently in use
 + [Click icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/click)
-+ <a href="https://www.flaticon.com/free-icons/revolver" title="revolver icons">Revolver icons created by max.icons - Flaticon</a>
++ [Gun icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/gun)
 + [Github icons created by riajulislam - Flaticon](https://www.flaticon.com/free-icons/github)
 + [Tweet icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/tweet)
 + [Linkedin icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/linkedin)

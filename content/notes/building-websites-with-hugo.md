@@ -16,7 +16,7 @@ keywords:
 ---
 These notes are written based on learnings from the book [Build Websites using Hugo](https://pragprog.com/titles/bhhugo/build-websites-with-hugo/) by Brian P. Hogan which was listed on the [External Learning Resources](https://gohugo.io/getting-started/external-learning-resources/) page on the official Hugo website.
 
-![Build Websites using Hugo Cover Page](/notes/learning/build-websites-with-hugo-cover-page.jpg)
+![Build Websites using Hugo Cover Page](/notes/learning/hugo/build-websites-with-hugo-cover-page.jpg)
 
 ## Why this book?
 I first learned how to create a static site using Hugo through the [official documentation](https://gohugo.io/getting-started/quick-start/). It’s an excellent starting point, and if you’re a web developer, you can have a site up and running in just an afternoon.
@@ -99,7 +99,8 @@ Here we change 'en-us' to 'en-gb' as I intend to use United Kingdom English. See
 In a Hugo site, you define layouts that contain this skeleton, so you can keep this boilerplate code in a central location. Your content pages contain only the content, and Hugo applies a layout based on the type of content.
 
 Hugo needs a layout for the home page of your site, a layout for other content pages, and a layout that shows a list of pages, like an archive index or a product list. The following figure illustrates this relationship:
-![Hugo Layout Relationships](hugo-layout-relationships.png)
+
+![Hugo Layout Relationships](/notes/learning/hugo/hugo-layout-relationships.png)
 
 As you can see in the figure, the "home page" of the site has its own layout. The "Product list" page has a "list layout" associated with it. However, the two product pages and the "About" page all share a layout.
 
@@ -231,7 +232,8 @@ hugo new theme basic
 ```
 
 This command creates the themes/basic directory and several subdirectories and files:
-![Directories and files created when generating a theme](generating-a-theme.png)
+
+![Directories and files created when generating a theme](/notes/learning/hugo/generating-a-theme.png)
 
 Before you can use the theme you have to tell Hugo about it by adding a line to your site's configuration:
 ```toml

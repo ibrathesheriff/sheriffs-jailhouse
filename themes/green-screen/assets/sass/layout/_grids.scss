@@ -57,3 +57,15 @@
         flex-direction: column;
     }
 }
+
+.two-column-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: var(--green-box-padding-left);
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+}

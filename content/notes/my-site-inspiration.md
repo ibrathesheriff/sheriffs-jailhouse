@@ -24,4 +24,8 @@ I created my initial version of my personal site in September 2022 by implementi
 https://colorlib.com/wp/template/ronin/
 
 ## Current site
-(Hacker Bytes)[https://hackerbytes.hackthedegree.com/]
+[Hacker Bytes](https://hackerbytes.hackthedegree.com/)
+
+[Brittany Chiang](https://brittanychiang.com/)
+
+[Jamie Zawinski](https://www.jwz.org/about.html)

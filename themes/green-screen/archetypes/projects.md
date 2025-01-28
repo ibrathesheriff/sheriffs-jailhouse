@@ -4,14 +4,12 @@ date: {{ .Date }}
 draft: false
 author: ibrathesheriff
 description: "This is a post about..."
-categories:
+technologies:
 - Personal
 - Thoughts
-tags:
-- software
-- html
-keywords:
-- jabberwocky
+timelineStart: "2025"
+timelineEnd: "present"
+image: "projects/hackthedegree.png"
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.

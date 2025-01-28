@@ -1,9 +1,26 @@
 {{ define "main" }}
-<article class="post-page-content-container">
-    <section>
-        <div class="markdown-container">
-            {{ .Content }}
-        </div>
-    </section>
-</article>
+<div class="post-page-content-container">
+    <div class="two-column-grid">
+        <section class="two-column-grid__column project-metadata green-box">
+            <a target="_blank" href="{{ .Params.projectUrl }}">
+                <img src="{{ .Params.Image | absURL }}" alt="{{.Title}} project image">
+            </a>
+            <h1 class="markdown-title">{{ .Title }}</h1>
+            <p>{{ .Params.timelineStart }}&mdash;{{ .Params.timelineEnd }}</p>
+            <p>{{ .Description }}</p>
+            <p class="project-technologies">
+                {{ range .Params.technologies }}
+                <span class="sheriff-green-text-shadow">{{ . }}</span> |
+                {{ end }}
+            </p>
+        </section>
+
+        <section class="two-column-grid__column project-content green-box">
+            <div class="markdown-container">
+                {{ .Content }}
+            </div>
+        </section>
+    </div>
+</div>
+
 {{ end }}
