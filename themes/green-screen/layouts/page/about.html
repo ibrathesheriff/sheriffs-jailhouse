@@ -1,46 +1,55 @@
 {{ define "main" }}
 <article class="post-page-content-container">
-    <div class="about-me-headline-container">
-        <h1 class="markdown-title" id="about-me-heading">
-            Hello, I'm <span class="about-me-author sheriff-green-text-shadow">{{ .Params.Author}}</span> a.k.a <span class="about-me-author sheriff-green-text-shadow">{{ .Params.Nickname }}</span>
-            <p class="headline-paragraph">
-                <span class="about-me-role">Coding Educator</span> <span class="sheriff-orange-text">|</span> <span class="about-me-role">Software Developer</span>
-            </p>
-            <p class="about-me-headline-bio">{{ .Params.Headline }}</p>
-            </h1>
+  <div class="about-me-headline-container">
+    <h1 class="markdown-title" id="about-me-heading">
+      Hello, I'm <span class="about-me-author sheriff-green-text-shadow">{{ .Params.Author}}</span> a.k.a <span
+        class="about-me-author sheriff-green-text-shadow">{{ .Params.Nickname }}</span>
+      <p class="headline-paragraph">
+        <span class="about-me-role">Coding Educator</span> <span class="sheriff-orange-text">|</span> <span
+          class="about-me-role">Software Developer</span>
+      </p>
+      <p class="about-me-headline-bio">{{ .Params.Headline }}</p>
+      <p>
+        {{ range .Site.Data.socialmedia.accounts }}
+        <a target="_blank" href="{{ .url }}">
+          <img class="img-icon-large" src="{{ .image | absURL }}" alt="{{ .alt }}">
+        </a>
+        {{ end }}
+      </p>
+    </h1>
 
-        <img src="{{ "img/landing/thesheriff.png" | absURL }}" alt="An image the Sheriff - ibrathesheriff"
-            class="centered-image">
+    <img src="{{ "img/landing/thesheriff.png" | absURL }}" alt="An image the Sheriff - ibrathesheriff"
+      class="centered-image">
+  </div>
+
+  <section>
+    <h2 class="markdown-subheading">ongoing projects</h2>
+    <div class="posts-container">
+      {{ range .Site.Data.projects.current }}
+      <div class="two-column-box green-box post-box green-shadow--hover">
+        <div class="two-column-box__column--20">
+          <a href="{{ .url }}">
+            <img src="{{ "img/icons/medium/silo-hard-drive-file.png" | absURL }}"
+              class="orange-shadow orange-shadow--hover image-width-60">
+          </a>
+        </div>
+        <div class="two-column-box__column--80">
+          <div class="post-metadata">
+            <h2>
+              <a href="{{ .url }}" class="white-anchor">{{ .name }}</a>
+            </h2>
+            <p>{{ .description }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
     </div>
+  </section>
 
-    <section>
-        <h2 class="markdown-subheading">ongoing projects</h2>
-        <div class="posts-container">
-            {{ range .Site.Data.projects.current }}
-            <div class="two-column-box green-box post-box green-shadow--hover">
-                <div class="two-column-box__column--20">
-                  <a href="{{ .url }}">
-                    <img src="{{ "img/icons/medium/silo-hard-drive-file.png" | absURL }}"
-                      class="orange-shadow orange-shadow--hover image-width-60">
-                  </a>
-                </div>
-                <div class="two-column-box__column--80">
-                  <div class="post-metadata">
-                    <h2>
-                      <a href="{{ .url }}" class="white-anchor">{{ .name }}</a>
-                    </h2>
-                    <p>{{ .description }}</p>
-                  </div>
-                </div>
-              </div>
-              {{ end }}
-        </div>
-    </section>
-
-    <section>
-        <div class="markdown-container" id="about-me-markdown">
-            {{ .Content }}
-        </div>
-    </section>
+  <section>
+    <div class="markdown-container" id="about-me-markdown">
+      {{ .Content }}
+    </div>
+  </section>
 </article>
 {{ end }}

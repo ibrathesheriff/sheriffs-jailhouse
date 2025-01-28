@@ -1,0 +1,19 @@
+{
+    "accounts": [
+        {
+            "image": "img/icons/small/github.png",
+            "url": "https://github.com/ibrathesheriff",
+            "alt": "ibrathesheriff github icon"
+        },
+        {
+            "image": "img/icons/small/twitter.png",
+            "url": "https://x.com/ibrathesheriff",
+            "alt": "ibrathesheriff x/twitter icon"
+        },
+        {
+            "image": "img/icons/small/linkedin.png",
+            "url": "https://www.linkedin.com/in/ibra-sururu/",
+            "alt": "ibrathesheriff linkedin icon"
+        }
+    ]
+}
