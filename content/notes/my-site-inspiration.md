@@ -23,6 +23,8 @@ I created my initial version of my personal site in September 2022 by implementi
 
 https://colorlib.com/wp/template/ronin/
 
+To view screenshots of the old site check the [Sheriff's Museum](/museum)
+
 ## Current site
 [Hacker Bytes](https://hackerbytes.hackthedegree.com/)
 
