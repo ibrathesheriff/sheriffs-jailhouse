@@ -50,6 +50,12 @@ Run the following command to create a new note document:
 hugo new projects/new-project.md
 ```
 
+## Create a open page for a year
+Run the following command to create a new open document:
+```bash
+hugo new projects/2025.md
+```
+
 ## Change the Code Highlighting Style
 Navigate to the [Chroma Style Gallery](https://xyproto.github.io/splash/docs/all.html) and select a code highlighting style e.g. dracula and then run:
 ```bash
@@ -64,6 +70,7 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 
 ## TODO 📋
 - [ ] Select a main font for the site
+- [ ] Hover effect on the list view to allow a reader to view the full heading
 - [ ] Switch to Dart Sass
 - [ ] Remove the last '|' from the tags display on posts
 - [ ] Fix broken image links on the posts page

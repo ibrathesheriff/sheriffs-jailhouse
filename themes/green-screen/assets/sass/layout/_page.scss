@@ -206,6 +206,19 @@
     font-size: 120%;
 }
 
+.open-heading {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.museum-markdown-content {
+    margin-bottom: 5%;
+
+    @media (max-width: 768px) {
+        margin-bottom: 10%;
+    }
+}
+
 .museum-image-container {
     img {
         display: block;

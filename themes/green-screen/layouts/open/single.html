@@ -1,0 +1,34 @@
+{{ define "main" }}
+<h1 class="markdown-title open-heading">Open | {{ .Params.Year }}:'{{ .Params.YearTitle }}'</h1>
+
+<h2 class="markdown-subheading">New Year's Eve Bingo</h2>
+
+<main class="landing-content green-box">
+    <div class="posts-container">
+        {{ range .Params.bingoCard }}
+        <!-- set the style depending on whether it's complete or not -->
+        {{ if eq .status "complete" }}
+        <div class="two-column-box orange-box post-box orange-shadow--hover">
+        {{ else }}
+        <div class="two-column-box green-box post-box green-shadow--hover">
+        {{ end }}
+            <div class="two-column-box__column--20">
+                <img src="{{ "img/icons/medium/silo-hard-drive-file.png" | absURL }}"
+                    class="orange-shadow orange-shadow--hover image-width-60">
+            </div>
+            <div class="two-column-box__column--80">
+                <div class="post-metadata">
+                    <h2 class="sheriff-white-text">
+                        {{ .item }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</main>
+
+<section class="markdown-container museum-markdown-content">
+    {{ .Content }}
+</section>
+{{ end }}
