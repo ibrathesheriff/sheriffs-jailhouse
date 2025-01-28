@@ -1,0 +1,27 @@
+{{ define "main" }}
+<article class="post-page-content-container">
+    <section>
+        <h1 class="markdown-title">{{ .Title }}</h1>
+        <div class="markdown-container">
+            {{ .Content }}
+        </div>
+        <ul id="image-list" class="hidden-block">
+            {{ range .Params.images }}
+                {{ $imageParts := split . " - " }} <!-- Split the URL path into parts -->
+                {{ $firstPart := index $imageParts 0 }}
+                {{ $secondPart := index $imageParts 1 }}
+                <li class="sheriff-green-text-shadow">{{ $firstPart | absURL }} - {{ $secondPart }}</li>
+            {{ end }}
+        </ul>
+        <h2 class="markdown-subheading sheriff-centred-text">
+            <span class="triangle-arrow__green" id="image-list-left-arrow">&#11164;</span> <span id="image-heading">landing page</span> <span class="triangle-arrow__green" id="image-list-right-arrow">&#11166;</span>
+        </h2>
+        <p class="museum-arrow-instructions" id="arrow-instructions">
+            *or use the left and right arrow keys
+        </p>
+        <div class="museum-image-container">
+            <img src="{{ .Params.landingPage | absURL }}" alt="museum image" id="image-list-display">
+        </div>
+    </section>
+</article>
+{{ end }}
