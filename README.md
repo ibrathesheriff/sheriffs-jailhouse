@@ -57,7 +57,7 @@ hugo gen chromastyles --style=dracula > themes/green-screen/assets/sass/componen
 ```
 
 ## License 📜
-MarkyBrief is licensed under the [MIT License](https://mit-license.org/).
+My personal site is licensed under the [MIT License](https://mit-license.org/).
 
 ## Contact 📬
 If you encounter any issues or have suggestions, please open an issue or reach out on the Discussions tab.
@@ -69,10 +69,12 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Fix broken image links on the posts page
 - [ ] Update the post and note summary system
 - [ ] Complete the changelog
-- [ ] Add key bindings on the home page to allow navigating using just the keyboard
+- [ ] Check if a webpage exists before navigating to it in the command mode
 - [ ] Add a "help" command which explains the workings of the available commands
 - [ ] Improve the display of tags and categories
 - [ ] Setup a monospace font for the site
 - [ ] Add black border around the revolver cursor graphic
 - [ ] Improve the display of images in markdown i.e. notes and posts
 - [ ] Add scroll to the project content side for the projects single display page
+- [ ] Add a 404 page
+- [ ] Add disqus comment section for posts and notes

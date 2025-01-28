@@ -205,3 +205,21 @@
     font-style: italic;
     font-size: 120%;
 }
+
+.museum-image-container {
+    img {
+        display: block;
+        width: 95%;
+        margin: auto;
+    }
+}
+
+.museum-arrow-instructions {
+    color: var(--sheriff-grey);
+    font-size: 0.9em;
+    text-align: center;
+
+    @media (max-width: 480px) {
+        display: 480;
+    }
+}

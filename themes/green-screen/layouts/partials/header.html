@@ -5,7 +5,6 @@
             {{ if $var }}
             <span class="blink-animation" id="bash-command">__</span>
             {{ else }}
-            {{ $s := slice "a" "b" "c" }}
             {{ $pathParts := split .RelPermalink "/" }} <!-- Split the URL path into parts -->
             {{ $lastPart := index $pathParts 0 }} <!-- Get the last part of the path -->
             {{ $pathIndex := (sub (len $pathParts) 2) }}

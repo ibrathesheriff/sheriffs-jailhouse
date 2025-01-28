@@ -2,7 +2,7 @@
 title: "Changelog"
 draft: false
 author: ibrathesheriff
-description: "Who is ibrathesheriff?"
+description: "A log or record of all notable changes made to the site."
 layout: "markdown-doc"
 ---
 Welcome to the changelog of my personal site. Dive into the recent updates and improvements made to the [ibrathesheriff.com](https://ibrathesheriff.com/). This changelog details new features, bug fixes, and enhancements related to the site's functionality and codebase.

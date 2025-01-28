@@ -48,6 +48,10 @@ a:active {
     text-overflow: ellipsis;
 }
 
+.sheriff-centred-text {
+    text-align: center;
+}
+
 .green-anchor {
     color: var(--sheriff-green);
     transition: all 0.3s ease-in-out;

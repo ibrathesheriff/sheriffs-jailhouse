@@ -38,7 +38,6 @@ function checkCommand(commandEntered) {
     }
 
     // commands must use a valid supported bash option
-    console.log(commandOptions.includes(commandParts[0]));
     if (!commandOptions.includes(commandParts[0])) {
         return false;
     }
@@ -46,14 +45,83 @@ function checkCommand(commandEntered) {
     return true;
 }
 
-const commandKeysToIgnore = ["Control", "Shift"];
-function ignoreCommandKey(keyEntered) {
-    for (let i = 0; i < commandKeysToIgnore.length; i++) {
-        if (commandKeysToIgnore.includes(keyEntered)) {
-            return true;
-        }
+function storeBashCommand(command) {
+    if (localStorage.getItem("commandList") === null) {
+        let commandList = [command];
+        localStorage.setItem("commandList", JSON.stringify(commandList));
+        const totalItems = 1;
+        localStorage.setItem("currentCommand", totalItems.toString());
+    } else {
+        let arrayString = localStorage.getItem("commandList");
+        const totalItems = parseInt(localStorage.getItem("currentCommand")) + 1;
+        let commandArray = JSON.parse(arrayString);
+        // add the new command
+        commandArray.push(command);
+        let storageString = JSON.stringify(commandArray);
+        localStorage.setItem("commandList", storageString);
+        localStorage.setItem("currentCommand", totalItems.toString());
     }
-    return false;
+}
+
+function logStoredCommands() {
+    Object.keys(localStorage).forEach(function (key) {
+        console.log(key, ":", localStorage.getItem(key));
+    });
+}
+
+function clearLocalStorage() {
+    localStorage.clear();
+}
+
+function getTheCurrentBashCommand(keyEntered) {
+    let arrayString = localStorage.getItem("commandList");
+    let commandArray = JSON.parse(arrayString);
+    const maxCommand = commandArray.length - 1;
+    let nextCommand = parseInt(localStorage.getItem("currentCommand"));
+    if (keyEntered == "ArrowUp") {
+        nextCommand--;
+    } else {
+        nextCommand++;
+    }
+
+    if (nextCommand < 0) {
+        nextCommand = maxCommand;
+    } else if (nextCommand > maxCommand) {
+        nextCommand = 0;
+    }
+    localStorage.setItem("currentCommand", nextCommand.toString());
+    const previousCommand = commandArray[nextCommand];
+    return previousCommand;
+}
+
+const commandKeysToIgnore = ["Control", "Shift", "ArrowLeft", "ArrowRight"];
+function ignoreCommandKey(keyEntered) {
+    return commandKeysToIgnore.includes(keyEntered);
+}
+
+const galleryArrows = ["ArrowLeft", "ArrowRight"];
+function galleryArrowPressed(keyEntered) {
+    return galleryArrows.includes(keyEntered);
+}
+
+function updateImageListDisplay(keyEntered, index, imagePaths, headings, displayImage,
+    imageHeading) {
+    if (keyEntered == "ArrowLeft") {
+        index--;
+    } else {
+        index++;
+    }
+    // wrap around if going out of bounds
+    if (index < 0) {
+        index = imagePaths.length - 1;
+    } else if (index >= imagePaths.length) {
+        index = 0;
+    }
+    displayImage.src = imagePaths[index];
+    if (imageHeading !== null) {
+        imageHeading.innerHTML = headings[index];
+    }
+    return index;
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -70,10 +138,46 @@ document.addEventListener("DOMContentLoaded", (event) => {
         displayFooter.style.display = "block";
         expandedFooter.style.display = "none";
     });
+    // handle image list
+    const imageList = document.getElementById("image-list");
+    const imageListDisplay = document.getElementById("image-list-display");
+    const imageHeading = document.getElementById("image-heading");
+    const arrowInstructions = document.getElementById("arrow-instructions");
+    let arrowInstructionsStatus = true;
+    const imageListPresent = imageList !== null;
+    let imageListIndex = 0;
+    let imageListImagePaths = [];
+    // image headings are optional
+    let imageListHeadings = [];
+    if (imageListPresent) {
+        const imageItems = imageList.getElementsByTagName("li");
+        for (let i = 0; i < imageItems.length; i++) {
+            const tempParts = imageItems[i].innerHTML.split(" - ");
+            imageListImagePaths.push(tempParts[0]);
+            imageListHeadings.push(tempParts[1])
+        }
+
+        const imageListLeftArrow = document.getElementById("image-list-left-arrow");
+        const imageListRightArrow = document.getElementById("image-list-right-arrow");
+        // image arrows are option
+        if (imageListLeftArrow !== null) {
+            imageListLeftArrow.addEventListener("click", function () {
+                imageListIndex = updateImageListDisplay("ArrowLeft", imageListIndex,
+                    imageListImagePaths, imageListHeadings, imageListDisplay,
+                    imageHeading);
+            });
+
+            imageListRightArrow.addEventListener("click", function () {
+                imageListIndex = updateImageListDisplay("ArrowRight", imageListIndex,
+                    imageListImagePaths, imageListHeadings, imageListDisplay,
+                    imageHeading);
+            });
+        }
+    }
     // handle entry of instructions
     const bashCommandContainer = document.getElementById("bash-command");
     let cursorMode = true;
-    document.addEventListener("keydown", function(event) {
+    document.addEventListener("keydown", function (event) {
         const keyPressed = event.key;
         prepareBashCommand(bashCommandContainer);
         if (cursorMode) {
@@ -93,11 +197,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 if (!urlPart.startsWith("/")) {
                     urlPart = "/" + urlPart;
                 }
+                // cache successful command entries
+                storeBashCommand(currentText);
                 // navigate to the requested page
                 window.location.href = urlPart;
             } else {
                 bashCommandContainer.innerHTML = `bash: ${currentText}: command not found`;
             }
+        } else if (imageListPresent && galleryArrowPressed(keyPressed)) {
+            imageListIndex = updateImageListDisplay(keyPressed, imageListIndex,
+                imageListImagePaths, imageListHeadings, imageListDisplay,
+                imageHeading);
+            if (arrowInstructionsStatus && arrowInstructions !== null) {
+                arrowInstructions.style.display = "none";
+                arrowInstructionsStatus = false;
+            }
+        } else if (keyPressed == "ArrowUp" || keyPressed == "ArrowDown") {
+            bashCommandContainer.innerHTML = getTheCurrentBashCommand(keyPressed);
         } else if (keyPressed == "Backspace") {
             if (currentText.length > 0) {
                 bashCommandContainer.innerHTML = currentText.substring(0, currentText.length - 1);
