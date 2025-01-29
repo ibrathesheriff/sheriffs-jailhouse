@@ -91,3 +91,4 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Add a 404 page
 - [ ] Add disqus comment section for posts and notes
 - [ ] Add effect when the site is set mute
+- [ ] Add the option to display images for New Year's Bingo Card items - see /static/open/2025/isuzu-19060-wasp.jpg
