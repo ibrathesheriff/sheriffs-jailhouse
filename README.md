@@ -9,7 +9,7 @@ Welcome to the Sheriff's Jailhouse! This repository serves as the HQ for my pers
 
 ## Getting Started 🛠️
 
-## Install and Run
+### Install and Run
 To run the site locally:
 1. **Clone the repository**:
     ```bash
@@ -32,35 +32,38 @@ Instead of **Step 3** you can generate the public directory as follows:
 hugo --cleanDestinationDir --minify
 ```
 
-## Create a post
+### Create a post
 Run the following command to create a new blog post:
 ```bash
 hugo new posts/new-post.md
 ```
 
-## Create a note
+### Create a note
 Run the following command to create a new note document:
 ```bash
 hugo new notes/new-note.md
 ```
 
-## Create a project
+### Create a project
 Run the following command to create a new note document:
 ```bash
 hugo new projects/new-project.md
 ```
 
-## Create a open page for a year
+### Create a open page for a year
 Run the following command to create a new open document:
 ```bash
 hugo new projects/2025.md
 ```
 
-## Change the Code Highlighting Style
+### Change the Code Highlighting Style
 Navigate to the [Chroma Style Gallery](https://xyproto.github.io/splash/docs/all.html) and select a code highlighting style e.g. dracula and then run:
 ```bash
 hugo gen chromastyles --style=dracula > themes/green-screen/assets/sass/components/_code_blocks.scss
 ```
+
+## Supported Navigation Commands
+To navigate 
 
 ## License 📜
 My personal site is licensed under the [MIT License](https://mit-license.org/).
@@ -70,6 +73,8 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 
 ## TODO 📋
 - [ ] Select a main font for the site
+- [ ] Add command autocomplete for the bash commands
+- [ ] Add support for "history" command
 - [ ] Hover effect on the list view to allow a reader to view the full heading
 - [ ] Switch to Dart Sass
 - [ ] Remove the last '|' from the tags display on posts
@@ -85,3 +90,4 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Add scroll to the project content side for the projects single display page
 - [ ] Add a 404 page
 - [ ] Add disqus comment section for posts and notes
+- [ ] Add effect when the site is set mute

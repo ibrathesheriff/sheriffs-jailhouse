@@ -29,20 +29,53 @@ function prepareBashCommand(commandElement) {
     }
 }
 
+class CommandCheckStatus {
+    #status;
+    #errorMessage;
+    constructor(status, errorMessage) {
+        this.#status = status;
+        this.#errorMessage = errorMessage;
+    }
+
+    isValid() {
+        return this.#status;
+    }
+
+    getErrorMessage() {
+        return this.#errorMessage;
+    }
+}
+
 const commandOptions = ["ls", "cat"];
 function checkCommand(commandEntered) {
     // commands must contain 2 parts
     const commandParts = commandEntered.split(" ");
+    const standardError = `bash: ${commandEntered}: command not found`;
     if (commandParts.length != 2) {
-        return false;
+        return new CommandCheckStatus(false, standardError);
     }
 
     // commands must use a valid supported bash option
     if (!commandOptions.includes(commandParts[0])) {
-        return false;
+        return new CommandCheckStatus(false, standardError);
     }
 
-    return true;
+    let pathSection = commandParts[1];
+    if (pathSection.startsWith("/")) {
+        pathSection = pathSection.substring(1);
+    }
+
+    if (pathSection.endsWith("/")) {
+        pathSection = pathSection.substring(0, pathSection.length - 1);
+    }
+
+    const catError = `cat: ${commandParts[1]}: Is a directory`;
+    const pathParts = pathSection.split("/");
+    if (commandParts[0] == "cat" && pathParts.length == 1) {
+        return new CommandCheckStatus(false, catError);
+    }
+
+    return new CommandCheckStatus(true, null);
 }
 
 function storeBashCommand(command) {
@@ -75,6 +108,9 @@ function clearLocalStorage() {
 
 function getTheCurrentBashCommand(keyEntered) {
     let arrayString = localStorage.getItem("commandList");
+    if (arrayString === null) {
+        return null;
+    }
     let commandArray = JSON.parse(arrayString);
     const maxCommand = commandArray.length - 1;
     let nextCommand = parseInt(localStorage.getItem("currentCommand"));
@@ -92,6 +128,34 @@ function getTheCurrentBashCommand(keyEntered) {
     localStorage.setItem("currentCommand", nextCommand.toString());
     const previousCommand = commandArray[nextCommand];
     return previousCommand;
+}
+
+function setMute() {
+    localStorage.setItem("mute", "true");
+}
+
+function setUnmute() {
+    localStorage.setItem("mute", "false");
+}
+
+function isMute() {
+    let muteStatus = localStorage.getItem("mute");
+    if (muteStatus === null) {
+        localStorage.setItem("mute", "false");
+        return false;
+    }
+    return muteStatus == "true";
+}
+
+function playAudio(audioFile) {
+    try {
+        if (!isMute()) {
+            let audioObj = new Audio(audioFile);
+            audioObj.play();
+        }
+    } catch(err) {
+        console.error(`Failed to play ${audioFile} audio: `, err);
+    }
 }
 
 const commandKeysToIgnore = ["Control", "Shift", "ArrowLeft", "ArrowRight"];
@@ -176,6 +240,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
     // handle entry of instructions
     const bashCommandContainer = document.getElementById("bash-command");
+    const terminalBellAudio = "/audio/bicycle-bell.mp3";
     let cursorMode = true;
     document.addEventListener("keydown", function (event) {
         const keyPressed = event.key;
@@ -186,7 +251,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
         const currentText = bashCommandContainer.innerHTML;
         if (keyPressed == "Enter") {
-            if (checkCommand(currentText)) {
+            if (currentText == "mute" || currentText == "unmute") {
+                if (currentText == "mute") {
+                    setMute();
+                } else {
+                    setUnmute();
+                    playAudio(terminalBellAudio);
+                }
+                bashCommandContainer.innerHTML = "";
+                return;
+            } else if (currentText == "history -c") {
+                clearLocalStorage();
+                bashCommandContainer.innerHTML = "";
+                return;
+            }
+            
+            const commandCheckStatus = checkCommand(currentText);
+            if (commandCheckStatus.isValid()) {
                 const temp = currentText.split(" ");
                 const commandPart = temp[0];
                 let urlPart = temp[1];
@@ -202,7 +283,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 // navigate to the requested page
                 window.location.href = urlPart;
             } else {
-                bashCommandContainer.innerHTML = `bash: ${currentText}: command not found`;
+                bashCommandContainer.innerHTML = commandCheckStatus.getErrorMessage();
             }
         } else if (imageListPresent && galleryArrowPressed(keyPressed)) {
             imageListIndex = updateImageListDisplay(keyPressed, imageListIndex,
@@ -213,7 +294,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 arrowInstructionsStatus = false;
             }
         } else if (keyPressed == "ArrowUp" || keyPressed == "ArrowDown") {
-            bashCommandContainer.innerHTML = getTheCurrentBashCommand(keyPressed);
+            const previousExecutedCommand = getTheCurrentBashCommand(keyPressed);
+            if (previousExecutedCommand !== null) {
+                bashCommandContainer.innerHTML = previousExecutedCommand;
+            } else {
+                playAudio(terminalBellAudio);
+            }
         } else if (keyPressed == "Backspace") {
             if (currentText.length > 0) {
                 bashCommandContainer.innerHTML = currentText.substring(0, currentText.length - 1);

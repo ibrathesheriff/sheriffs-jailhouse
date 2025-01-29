@@ -44,6 +44,10 @@ Thank you to these designers for putting their work out there for free! Your bea
 + [R icons created by Becris - Flaticon](https://www.flaticon.com/free-icons/r)
 + [Medal icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/medal)
 
+## Sound Effects
+A big thank you to the talented creators who provided the sound effects that bring another dimension to this site:
++ Sound Effect by [Jurij](https://pixabay.com/users/soundreality-31074404/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=155622) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=155622)
+
 ## Friends
 A heartfelt thank you to the Shipping-Mates: Dionne, Guide, and Vic, for inspiring me to bring this website to life. There's still plenty to refine, but sometimes you just have to take the leap and begin!
 
