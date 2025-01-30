@@ -2,6 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: false
+draftMode: false
 author: ibrathesheriff
 description: "This is a post about..."
 categories:
