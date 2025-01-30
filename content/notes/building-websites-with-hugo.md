@@ -1,40 +1,43 @@
 ---
 title: "Building Websites With Hugo"
 date: 2025-01-25T20:41:37+02:00
-lastmodified: 2025-01-25T20:41:37+02:00
+lastmodified: 2025-01-30T20:41:37+02:00
 draft: false
+draftMode: false
 author: ibrathesheriff
-description: "Summary notes taken while learning to create a Hugo theme by reading Building Websites With Hugo by Brian P. Hogan"
+description: "These are my notes from learning Hugo theme development, based on Brian P. Hogan's Building Websites With Hugo."
 categories:
-- Personal
-- Thoughts
+- static-websites
+- web-development
 tags:
 - static-websites
 - hugo
+- personal-site
 keywords:
-- jabberwocky
+- static-websites
+- hugo
 ---
-These notes are written based on learnings from the book [Build Websites using Hugo](https://pragprog.com/titles/bhhugo/build-websites-with-hugo/) by Brian P. Hogan which was listed on the [External Learning Resources](https://gohugo.io/getting-started/external-learning-resources/) page on the official Hugo website.
+These notes were written based on learnings from the book [Build Websites using Hugo](https://pragprog.com/titles/bhhugo/build-websites-with-hugo/) by Brian P. Hogan which was listed on the [External Learning Resources](https://gohugo.io/getting-started/external-learning-resources/) page on the official Hugo website.
 
 ![Build Websites using Hugo Cover Page](/notes/learning/hugo/build-websites-with-hugo-cover-page.jpg)
 
 ## Why this book?
-I first learned how to create a static site using Hugo through the [official documentation](https://gohugo.io/getting-started/quick-start/). It’s an excellent starting point, and if you’re a web developer, you can have a site up and running in just an afternoon.
+I first learned how to create a static site using Hugo through the [official documentation](https://gohugo.io/getting-started/quick-start/). It's an excellent starting point, and if you're a web developer, you can have a site up and running in just an afternoon.
 
 However, setting up a theme as a novice can be challenging. Not all theme creators provide documentation as detailed or beginner-friendly as Hugo's. Many assume you already have some experience with Hugo, so I had to figure out certain configurations through trial and error. Surprisingly, I really enjoyed this process—I thrive on the "just hack at it" mindset.
 
 *But why a book?*
 
-I wanted to migrate my existing static site, built with vanilla HTML, CSS, and JavaScript, to Hugo so I could easily publish blog posts and notes like this one. Developing my own theme was important to me because I wanted the site to feel truly personal. Since I learned to code at university, I’ve always preferred books over YouTube for diving deep into a topic. So, I decided to grab a book and get to work.
+I wanted to migrate my existing static site, built with vanilla HTML, CSS, and JavaScript, to Hugo so I could easily publish blog posts and notes like this one. Developing my own theme was important to me because I wanted the site to feel truly personal. Since I learned to code at university, I've always preferred books over YouTube for diving deep into a topic. So, I decided to grab a book and get to work.
 
 I perused the [External Learning Resources](https://gohugo.io/getting-started/external-learning-resources/) on the Hugo website and chose Brian P. Hogan's book because its approach felt more aligned with what I was setting out to do:
->  In this book, you’ll use Hugo to build a personal portfolio site that you can use to showcase your skills and thoughts to the world
+>  In this book, you'll use Hugo to build a personal portfolio site that you can use to showcase your skills and thoughts to the world
 
 ## Preface
 Are you using a database to serve content that rarely changes? Like WordPress or Ghost. However, since most content doesn't change in real time, you're sacrificing speed and scalability for features that benefit content creators and developers instead of the people who want to read your content. And that additional complexity means you need more resources in production too: more servers to handle the traffic, standby database servers, a caching layer
 you have to manage, and more.
 
-There's no better way to make a snappy content site than by serving static pages from a traditional web server or a content delivery network (CDN). But you don’t have to give up the rapid development features you’ve come to expect. Static site generators, like Hugo, give you a fantastic middle ground. You get the theming and content management features of a database-driven site without the bloat, security vulnerabilities, or complexities associated with caching.
+There's no better way to make a snappy content site than by serving static pages from a traditional web server or a content delivery network (CDN). But you don't have to give up the rapid development features you've come to expect. Static site generators, like Hugo, give you a fantastic middle ground. You get the theming and content management features of a database-driven site without the bloat, security vulnerabilities, or complexities associated with caching.
 
 ## Chapter 1: Kicking the Tires
 
@@ -49,7 +52,7 @@ And then to check the installation, check the version by using the following com
 hugo version
 ```
 
-The hugo command has several subcommands that you’ll use as you build your site. You can see a list of all commands with `hugo help`.
+The hugo command has several subcommands that you'll use as you build your site. You can see a list of all commands with `hugo help`.
 
 ### Creating Your Site
 Hugo has a built-in command that generates a website project for you; this includes all of the files and directories you need to get started.
@@ -77,7 +80,7 @@ See documentation at https://gohugo.io/.
 ```
 
 The following will be created:
-+ `archetypes`: where you place Markdown templates for various types of content. An *"archetype"* is an original model or pattern that you use as the basis for other things of the same type. Hugo uses the files in the archetypes folder as models when it generates new content pages. There’s a default one that places a title and date in the file and sets the draft status to true.
++ `archetypes`: where you place Markdown templates for various types of content. An *"archetype"* is an original model or pattern that you use as the basis for other things of the same type. Hugo uses the files in the archetypes folder as models when it generates new content pages. There's a default one that places a title and date in the file and sets the draft status to true.
 + `hugo.toml`: holds configuration variables for your site that Hugo uses internally when constructing your pages, but you can also use values from this file in your themes.
 + `content`: holds all of the content for your site. You can organise your content in subdirectories like posts, projects, and videos. Each directory would then contain a collection of Markdown or HTML documents.
 + `data`: holds data files in YAML, JSON, or TOML. You can load these data files and extract their data to populate lists or other aspects of your site.
@@ -104,7 +107,7 @@ Hugo needs a layout for the home page of your site, a layout for other content p
 
 As you can see in the figure, the "home page" of the site has its own layout. The "Product list" page has a "list layout" associated with it. However, the two product pages and the "About" page all share a layout.
 
-Let's start with the home page layout. Hugo uses a separate layout for the home page because it assumes you’ll want your home page to have a different look than other content pages.
+Let's start with the home page layout. Hugo uses a separate layout for the home page because it assumes you'll want your home page to have a different look than other content pages.
 
 Create the file `layouts/index.html` and add the following code, which defines an HTML skeleton for the home page:
 ```html
@@ -123,7 +126,7 @@ Create the file `layouts/index.html` and add the following code, which defines a
 
 To pull in data and content, Hugo uses Go's `http/templates `library in its layouts. It's worth exploring when you want to build more complex templates.
 
-In addition to the HTML code, there are some spots between double curly braces. This is how you define where content goes, and the content can come from many places. The `{{ .Site.Title }}` lines pull the title field out of the `hugo.toml` file you just edited and place it into the `<title>` and `<h1>` tags. The `.Site` prefix tells Hugo to get the value from the site’s data rather than from the page's data.
+In addition to the HTML code, there are some spots between double curly braces. This is how you define where content goes, and the content can come from many places. The `{{ .Site.Title }}` lines pull the title field out of the `hugo.toml` file you just edited and place it into the `<title>` and `<h1>` tags. The `.Site` prefix tells Hugo to get the value from the site's data rather than from the page's data.
 
 The `{{ .Content }}` line displays the content for the page, which will come from an associated Markdown document in your site's content folder. Note that this doesn't use the `.Site` prefix, because this data is related to the page. When
 you're working with a Hugo layout, there's a "scope", or "context" that contains the data you want to access. The current context in a template is represented by the dot.
@@ -152,7 +155,7 @@ Hugo builds your site and displays the following output in your console letting 
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ```
-Hugo’s development server automatically reloads files when they change
+Hugo's development server automatically reloads files when they change
 
 #### Step 3: Creating a page using Hugo's content generator i.e. Creating Content Using Archetypes
 When you created content/_index.md, you created the file manually. You can tell Hugo to create content pages that contain placeholder content. This way, you never have to start with a blank slate when creating content. Hugo uses
@@ -194,13 +197,13 @@ Now we can create the single page layout file - `layouts/_default/single.html` u
 
 The site title, page title, and page content are all visible. The page title comes from the about.md file's front matter, while the site title comes from the `hugo.toml` file.
 
-Hugo doesn’t clean up the public folder. If you were to remove some pages or rename them, you would need to delete the generated versions from the public folder as well. It’s much easier to delete the entire public folder whenever you
+Hugo doesn't clean up the public folder. If you were to remove some pages or rename them, you would need to delete the generated versions from the public folder as well. It's much easier to delete the entire public folder whenever you
 generate the site:
 ```shell
 rm -r public && hugo
 ```
 
-Alternatively, use Hugo’s `--cleanDestinationDir` argument:
+Alternatively, use Hugo's `--cleanDestinationDir` argument:
 ```shell
 hugo --cleanDestinationDir
 ```
@@ -215,14 +218,12 @@ So far, you've placed all of your layout files into your Hugo site's layouts dir
 
 A basic Hugo theme only needs these files:
 layouts
-
-|-------default
-
-        |---- list.html
-
-        |---- single.html
-
+```shell
+|-------default  
+        |---- list.html  
+        |---- single.html  
 |-------index.html
+```
 
 ### Generating the Theme
 You can make a theme by creating a new directory in the themes folder of your site, but Hugo has a built-in theme generator that creates everything you need for your theme. Execute this command from the root of your Hugo site
@@ -248,20 +249,20 @@ The theme has a place for its own archetypes, as well as directories to store th
 ### Using Content Blocks and Partials
 Your home page layout and single page layout both contain the HTML skeleton. That skeleton is going to get a lot more complex once you add a header, footer, and navigation. Instead of duplicating that code in multiple places, Hugo provides a single place for you to put your skeleton so that all other layouts can build on it.
 
-`themes/basic/layouts/_default/baseof.html` - This file will be the “base” of every other layout you’ll create, hence its name. And instead of including the full skeleton, it's pulling in other files, or partials, which contain pieces of the layout. Placing common pieces in partials makes it easier for you to reuse these across different layouts, and it helps you think  about parts of your site as components.
+`themes/basic/layouts/_default/baseof.html` - This file will be the "base" of every other layout you'll create, hence its name. And instead of including the full skeleton, it's pulling in other files, or partials, which contain pieces of the layout. Placing common pieces in partials makes it easier for you to reuse these across different layouts, and it helps you think  about parts of your site as components.
 
 You will see the partials placed like so:
 ```html
 {{- partial "head.html" . -}}
 ```
-Previously, when you’ve used those curly braces to inject the title, you used `{{`. But this code uses `{{-`. The dash suppresses whitespace characters in the output, such as spaces and newline characters. Placing a dash after the opening braces removes all whitespace in front of the expression, and placing the dash in front of the closing braces removes whitespace after the expression.
+Previously, when you've used those curly braces to inject the title, you used `{{`. But this code uses `{{-`. The dash suppresses whitespace characters in the output, such as spaces and newline characters. Placing a dash after the opening braces removes all whitespace in front of the expression, and placing the dash in front of the closing braces removes whitespace after the expression.
 
-In addition to the dashes, there's a dot after the name of the partial. The partial function takes a filename and a context for the data. In order to access data like the page title and content, you have to pass the context to the partial function, and a period means "the current context." Remember that the default context for a layout is the Page context, so when you pass the dot to the partial function, you’re making the Page context available to the partial.
+In addition to the dashes, there's a dot after the name of the partial. The partial function takes a filename and a context for the data. In order to access data like the page title and content, you have to pass the context to the partial function, and a period means "the current context." Remember that the default context for a layout is the Page context, so when you pass the dot to the partial function, you're making the Page context available to the partial.
 
-The template generator also created these files, but it left them blank. Let’s fill them in, one piece at a time.
+The template generator also created these files, but it left them blank. Let's fill them in, one piece at a time.
 
 #### Step 1: Fill in the head
-The first partial listed in the `baseof.html` file is the head.html file, which you’ll find in `themes/basic/layouts/partials/head.html`. This file will contain the code that would normally appear in the head section of a website. Open it in your editor.
+The first partial listed in the `baseof.html` file is the head.html file, which you'll find in `themes/basic/layouts/partials/head.html`. This file will contain the code that would normally appear in the head section of a website. Open it in your editor.
 
 Add the following:
 ```html
@@ -273,7 +274,7 @@ Add the following:
 ```
 
 #### Step 2: Fill in the header
-The next partial reference is the header.html file, so open the file `themes/basic/layouts/partials/header.html`. This file will hold the header of your page. It’s where you'll put the banner and navigation:
+The next partial reference is the header.html file, so open the file `themes/basic/layouts/partials/header.html`. This file will hold the header of your page. It's where you'll put the banner and navigation:
 ```html
 <header>
 <h1>{{ .Site.Title }}</h1>
@@ -295,12 +296,12 @@ Finally, create the footer of the site by opening `themes/basic/layouts/_default
 ```
 
 #### Step 4: Use the base
-To use the new base template, replace the existing layouts you’ve used with code that defines a layout "block". In the baseof.html file, you’ll find this line:
+To use the new base template, replace the existing layouts you've used with code that defines a layout "block". In the baseof.html file, you'll find this line:
 ```html
 {{- block "main" . }}{{- end }}
 ```
 
-This line looks for a block named "main" and pulls it in. Those blocks are what you’ll define in your actual layout pages like `index.html` and `single.html`. Notice it’s also passing the current context, so you’ll be able to access it in the layout pages.
+This line looks for a block named "main" and pulls it in. Those blocks are what you'll define in your actual layout pages like `index.html` and `single.html`. Notice it's also passing the current context, so you'll be able to access it in the layout pages.
 
 #### Styling the Theme with CSS
 Add styling in a file: `themes/basic/static/css/style.css` for the site.
@@ -310,9 +311,9 @@ Then add the following to the partials head.html file:
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 ```
 
-The relURL function creates site-root-relative link to the file instead of an absolute link that contains the site’s domain name. For ease of development and deployment, you should use relative URLs whenever possible. When Hugo generates the site, it’ll copy the contents of the `themes/basic/static directory`, including all subdirectories, into the public directory, so your CSS file will be located at `/css/style.css`.
+The relURL function creates site-root-relative link to the file instead of an absolute link that contains the site's domain name. For ease of development and deployment, you should use relative URLs whenever possible. When Hugo generates the site, it'll copy the contents of the `themes/basic/static directory`, including all subdirectories, into the public directory, so your CSS file will be located at `/css/style.css`.
 
-In this chapter, you kept the stylesheet in the static directory of the theme instead of in the static directory in your Hugo site. It’s best to follow this convention and use your site’s static directory for images or other assets that are specific to your site, and keep things that are specific to the theme within the theme's directory structure. When you generate your site, Hugo will grab files from both places and put them in the public directory. If you name files the same, the ones in your site’s static directory will override the ones in the theme.
+In this chapter, you kept the stylesheet in the static directory of the theme instead of in the static directory in your Hugo site. It's best to follow this convention and use your site's static directory for images or other assets that are specific to your site, and keep things that are specific to the theme within the theme's directory structure. When you generate your site, Hugo will grab files from both places and put them in the public directory. If you name files the same, the ones in your site's static directory will override the ones in the theme.
 
 ## Chapter 3: Adding Content Sections
 
@@ -335,12 +336,12 @@ Description...
 ```
 
 ### Creating the List Layout
-Unfortunately, if you visited `http://localhost:1313/projects`, instead of a list of projects, you won’t see anything at all. That’s because you haven’t defined a layout
-that displays lists. Let’s do that now.
+Unfortunately, if you visited `http://localhost:1313/projects`, instead of a list of projects, you won't see anything at all. That's because you haven't defined a layout
+that displays lists. Let's do that now.
 
-Up until this point, you’ve only worked with individual pages, like the home page or a project page. You haven’t done anything with lists of content yet. But if you’re looking to show a list of tags, categories, or in this case, projects, you have to define a layout for those named `list.html`.
+Up until this point, you've only worked with individual pages, like the home page or a project page. You haven't done anything with lists of content yet. But if you're looking to show a list of tags, categories, or in this case, projects, you have to define a layout for those named `list.html`.
 
-Let’s define a default list template that will work for all list pages on the site. Open the file `themes/basic/layouts/_default/list.html` and add the following code to the file, which displays the title of the content page and builds a list of links to each content page:
+Let's define a default list template that will work for all list pages on the site. Open the file `themes/basic/layouts/_default/list.html` and add the following code to the file, which displays the title of the content page and builds a list of links to each content page:
 ```html
 {{ define "main" }}
 <h2>{{ .Title }}</h2>
@@ -351,10 +352,10 @@ Let’s define a default list template that will work for all list pages on the 
 </ul>
 {{ end }}
 ```
-The {{ range .Pages }} section is where the magic happens. The `.Pages` collection contains all of the pages related to the section you're working with. When Hugo builds the list page for Projects, for example, it collects all the pages within `content/projects` and makes those available in the .Pages variable in the context. The range function lets you iterate over the results so you can display each record in the collection. Inside of the range block, you access the properties of each page, as the context is now set to that specific page's context. In this case, you’re displaying the site-relative URL and title of each page.
+The {{ range .Pages }} section is where the magic happens. The `.Pages` collection contains all of the pages related to the section you're working with. When Hugo builds the list page for Projects, for example, it collects all the pages within `content/projects` and makes those available in the .Pages variable in the context. The range function lets you iterate over the results so you can display each record in the collection. Inside of the range block, you access the properties of each page, as the context is now set to that specific page's context. In this case, you're displaying the site-relative URL and title of each page.
 
 ### Creating More Specific Layouts
-You’ll often find that you’ll want some pages or sections of your site to have slightly different themes or layouts. Let’s make a specific layout for project pages that displays the list of projects in the sidebar of each project page so
+You'll often find that you'll want some pages or sections of your site to have slightly different themes or layouts. Let's make a specific layout for project pages that displays the list of projects in the sidebar of each project page so
 that visitors can navigate through projects easier.
 
 In the themes/basic/layouts folder, create a new folder named projects. You can do that on the command line like this:
@@ -376,7 +377,7 @@ Then, create the file `themes/basic/layouts/projects/single.html`. Add this code
 </div>
 {{ end }}
 ```
-In the project-list section, add the code to iterate over all of your projects and display a link to each page. Since you’re not working with a collection in a list layout, you won’t have access to a .Pages variable. Hugo provides a mechanism where you can access any content collection. The `.Site.RegularPages` variable gives you access to all of the pages in your site. You can whittle that down with the where function, which works similar to how a SQL statement works.For example, to find all of the Project pages, you’d write this statement:
+In the project-list section, add the code to iterate over all of your projects and display a link to each page. Since you're not working with a collection in a list layout, you won't have access to a .Pages variable. Hugo provides a mechanism where you can access any content collection. The `.Site.RegularPages` variable gives you access to all of the pages in your site. You can whittle that down with the where function, which works similar to how a SQL statement works.For example, to find all of the Project pages, you'd write this statement:
 ```html
 {{ range (where .Site.RegularPages "Type" "in" "projects") }}
 ```
@@ -393,7 +394,7 @@ So, to display the list of all projects, add this code to the `project-list` sec
     </section>
 ```
 
-You can sort the items too. If you’d like to order them by the most recent project first, use the `.ByDate` function and the `.Reverse` function like this:
+You can sort the items too. If you'd like to order them by the most recent project first, use the `.ByDate` function and the `.Reverse` function like this:
 ```html
 range (where .Site.RegularPages "Type" "in" "projects").ByDate.Reverse
 ```
@@ -404,7 +405,7 @@ range first 1 (where .Site.RegularPages "Type" "in" "projects").ByDate.Reverse
 ```
 
 ### Adding Content to List Pages
-When you visit http://localhost:1313/projects,you see a list of projects and nothing else. Let’s add some content to the page as well. To add content to list pages, you need to add an _index.md file to the folder associated with the content. This is similar to how you added content to your site’s home page.
+When you visit http://localhost:1313/projects,you see a list of projects and nothing else. Let's add some content to the page as well. To add content to list pages, you need to add an _index.md file to the folder associated with the content. This is similar to how you added content to your site's home page.
 
 Create the file `content/projects/_index.md`. You can do this with the hugo command:
 ```shell
@@ -420,7 +421,7 @@ This is a list of my projects. You can select each project to learn more about e
 Ensure the `list.html` has the `{{ .Content }}` block so that the text is displayed.
 
 ### Customizing the Project List
-Just like how you can create layouts for individual items in a content section, you can control how the list for a content section looks with its own list layout. The default list layout uses a bulleted list, but let’s make a layout for projects with a little more structure.
+Just like how you can create layouts for individual items in a content section, you can control how the list for a content section looks with its own list layout. The default list layout uses a bulleted list, but let's make a layout for projects with a little more structure.
 
 Create the file `themes/basic/layouts/projects/list.html`. Define the main block, bring in the page title and the content section, and then iterate through the pages the same way you did for the default list page, but use HTML sectioning elements instead of a list:
 ```html
@@ -440,7 +441,7 @@ Create the file `themes/basic/layouts/projects/list.html`. Define the main block
 ## Working with Data
 
 ### Using Site Configuration Data in Your Theme
-Your layouts use {{ .Site.Title }} to display the name of the site in the browser title bar and in your header navigation. You can place all kinds of other data in your site’s configuration file and use it as well.
+Your layouts use {{ .Site.Title }} to display the name of the site in the browser title bar and in your header navigation. You can place all kinds of other data in your site's configuration file and use it as well.
 
 Open `hugo.toml` and add a new params section that defines the author of the site and a description of the site:
 ```toml
@@ -490,12 +491,12 @@ Now we can update the `single.html` for projects to use the additional data fiel
 
 Notice that the `image`, `alt_text`, and `tech_used` fields are prefixed by `.Params`. Any custom fields you add to the front matter get added to this .Params collection. If you don't add that prefix, Hugo won't be able to find the data. Fields like description and title are predefined fields that Hugo knows about, so you don't need the params prefix when referencing them.
 
-You can find the list of predefined fields in [Hugo’s documentation.](https://gohugo.io/content-management/front-matter/#predefined).
+You can find the list of predefined fields in [Hugo's documentation.](https://gohugo.io/content-management/front-matter/#predefined).
 
 ### Conditionally Displaying Data
 Using `with` instead of `isset` due it's limitations when dealing with empty vs. default vs. set values.
 
-To handle cases where you’re checking for a value in default variable like this, use Hugo’s with function. Replace the existing meta description in `themes/basic/layouts/partials/head.html` with this block of code, which conditionally
+To handle cases where you're checking for a value in default variable like this, use Hugo's with function. Replace the existing meta description in `themes/basic/layouts/partials/head.html` with this block of code, which conditionally
 sets the description:
 ```html
 <meta name="description" content="
@@ -508,7 +509,7 @@ sets the description:
 
 Now add the `description` field to the _index.md in the projects directory in the content directory.
 
-The `<title>` element currently uses the title of the site and doesn’t accurately reflect the title of an individual page. This can be bad for search engine ranking, but it’s also bad from a usability standpoint. The value of the `<title>` tag is what appears in the browser title or bookmark tab, as well as a bookmark someone creates. Let’s use the default site title on the home page, and use the more specific page title everywhere else. To do this, use an if statement with the built-in `.Site.IsHome` variable to check to see if you’re on the home page or not and display the site title or the more specific page title. Modify the head partial and replace the existing `<title>` tag with this code:
+The `<title>` element currently uses the title of the site and doesn't accurately reflect the title of an individual page. This can be bad for search engine ranking, but it's also bad from a usability standpoint. The value of the `<title>` tag is what appears in the browser title or bookmark tab, as well as a bookmark someone creates. Let's use the default site title on the home page, and use the more specific page title everywhere else. To do this, use an if statement with the built-in `.Site.IsHome` variable to check to see if you're on the home page or not and display the site title or the more specific page title. Modify the head partial and replace the existing `<title>` tag with this code:
 ```html
 <title>
 {{- if .Page.IsHome -}}
@@ -522,7 +523,7 @@ The `<title>` element currently uses the title of the site and doesn’t accurat
 Notice that this code appends the site title to the page title, which is a common practice when optimizing your site for search engines, as the page title shows up as the title in search results. With these changes in place, your page's data more accurately reflects the specific page.
 
 ### Using Local Data Files
-Sometimes you might want to drive sections of your site from other data sources. Let’s look at how to do that.
+Sometimes you might want to drive sections of your site from other data sources. Let's look at how to do that.
 
 See page 42.
 
@@ -557,7 +558,7 @@ Then in the `contact.html` in the _default directory in the layouts directory ad
 ```
 
 The layout you created won't override the default single page
-layout because it’s not associated with a specific type of content. When you created a layout for projects, Hugo automatically associated the layout with all content within the projects folder. In this case, there’s no association like that, so you have to explicitly assign the layout file to the `contact.md` Markdown file. Open `content/contact.md` and specify the contact layout in the page's front
+layout because it's not associated with a specific type of content. When you created a layout for projects, Hugo automatically associated the layout with all content within the projects folder. In this case, there's no association like that, so you have to explicitly assign the layout file to the `contact.md` Markdown file. Open `content/contact.md` and specify the contact layout in the page's front
 matter by adding the following code:
 ```html
 ---
@@ -576,16 +577,16 @@ See page 44 to 48 on how data can be pulled from the GitHub API.
 ### Syndicating Content with RSS
 See page 48 to 50.
 
-Hugo creates RSS feeds for your site automatically using a built-in RSS 2.0 template. If you visit http://localhost:1313/index.xml, you’ll find a pre-built RSS feed that includes all of your pages.
+Hugo creates RSS feeds for your site automatically using a built-in RSS 2.0 template. If you visit http://localhost:1313/index.xml, you'll find a pre-built RSS feed that includes all of your pages.
 
-People won’t know there’s a feed for your site unless you tell them about it. To make your feed discoverable, you can add a meta tag to your site’s header that looks like this:
+People won't know there's a feed for your site unless you tell them about it. To make your feed discoverable, you can add a meta tag to your site's header that looks like this:
 ```html
 <link rel="alternate" type="application/rss+xml"
 href="http://example.com/feed" >
 ```
 
 ### Rendering Content as JSON
-See page 50 to .
+See page 50 to 52.
 
 Hugo supports JSON output out of the box too, which means you can use Hugo to create a JSON API that you can consume from other applications. Unlike RSS feeds, you need to create a layout for your JSON output, and you must specify which pages of your site should use this output type.
 
@@ -689,7 +690,7 @@ In the new file, add the usual layout boilerplate, including the title and the `
 {{ end }}
 ```
 
-You’ve included `{{. Content }}` in the layout. When you’re looking at the /tags  section of the site, Hugo will look in `content/tags/_index.md` for that content. Create the `_index.md` file now using:
+You've included `{{. Content }}` in the layout. When you're looking at the /tags  section of the site, Hugo will look in `content/tags/_index.md` for that content. Create the `_index.md` file now using:
 ```shell
 hugo new tags/_index.md
 ```
@@ -720,7 +721,7 @@ in
 The tags listing page is located at /tags, and each tag itself is located at `/tags/tagname`. As you iterate over each tag, you can construct the link to each tag by appending the tag name to /tags/. However, since tags might contain spaces or other characters, use the `urlize` function to encode the tag as a URL-safe string.
 
 ### Hugo Support for Syntax Highlighting of Code
-If you’re publishing posts, you might want to include snippets of code from time to time. Hugo supports syntax highlighting using a library named [Chroma](https://github.com/alecthomas/chroma),a which is
+If you're publishing posts, you might want to include snippets of code from time to time. Hugo supports syntax highlighting using a library named [Chroma](https://github.com/alecthomas/chroma),a which is
 compatible with the popular [Pygments](https://pygments.org/) syntax highlighter.
 
 To configure this, tell Hugo you want it to use Pygments-style classes when it highlights your code. Add this line to `hugo.toml`:
@@ -746,7 +747,7 @@ let y = 30;
 By default, your blog contents show up under posts/. For example, your first blog post is available at http://localhost:1313/posts/first-post. Many blogs use the year/month/title format for their blog post URLs. This meaningful URL shows anyone looking at the URL how old the post might be, but it also shows that the content is organized by date. In sites with content organized like this, a visitor could see content for the rest of the month, or for the whole year, by specifying the year or month.
 
 A permalink is a permanent link to a specific page, often used when sharing a page with others through social media, newsletters, or even search results. You can use front matter on a post to control the permalink for a post by
-using the url field, but that's really only meant to handle situations where you're migrating content or need to do some one-off customization. Hugo lets you define how you’d like to structure your links in its configuration file.
+using the url field, but that's really only meant to handle situations where you're migrating content or need to do some one-off customization. Hugo lets you define how you'd like to structure your links in its configuration file.
 
 In hugo.toml, add a new Permalinks section and define a new rule that makes posts available under `/posts/year/month/slug`:
 ```toml
@@ -758,13 +759,13 @@ This gives you URLs like `/posts/2020/01/first_post`. The slug is the end part o
 
 If you visit `/posts/2020`, you might expect to find a list of all posts for that year.
 
-Unfortunately, Hugo doesn't support generating these pages currently, at least not without a little extra work. However, one of Hugo's maintainers offered a practical workaround. By using Hugo's taxonomy feature and a little clever use of front matter, you can generate archive pages of posts for years and months. You’re going to add "year"
+Unfortunately, Hugo doesn't support generating these pages currently, at least not without a little extra work. However, one of Hugo's maintainers offered a practical workaround. By using Hugo's taxonomy feature and a little clever use of front matter, you can generate archive pages of posts for years and months. You're going to add "year"
 and "month" as new taxonomies, and "tag" your posts with a year and month. Hugo can then build the year and month pages for you just like it builds pages for categories and tags.
 
 For more check out page 64.
 
 ### Customizing Blog List Pages
-The list of posts isn't very appealing since we're using the default list layout. Let’s make a layout for posts that shows the title, post date, and a summary of each post's content.
+The list of posts isn't very appealing since we're using the default list layout. Let's make a layout for posts that shows the title, post date, and a summary of each post's content.
 
 See page 65 to 67.
 
@@ -812,7 +813,7 @@ Then, open `themes/basic/layouts/posts/single.html` and add this code below your
 </section>
 ```
 
-This code uses a with block to check if there’s any related content. If there is, it displays the header and the list of content.
+This code uses a with block to check if there's any related content. If there is, it displays the header and the list of content.
 
 By adding the same keyword to the Jabberwocky project and the "second post" blog post, the Jabberwocky project now shows up as a related piece of content.
 
