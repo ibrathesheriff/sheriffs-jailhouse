@@ -73,10 +73,12 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 
 ## TODO 📋
 - [ ] Select a main font for the site
+- [ ] Document general categories, tags and keyword rules.
 - [ ] Add a related section to link to related blog posts or notes
 - [ ] Option to add a "resources" section in blog posts
 - [ ] Add command autocomplete for the bash commands
 - [ ] Add support for "history" command
+- [ ] Add support for "show" or "pwd" command to show post, note and project URLs. You can maybe use a HTML element that is hidden say this page can use the command
 - [ ] Hover effect on the list view to allow a reader to view the full heading
 - [ ] Switch to Dart Sass
 - [ ] Remove the last '|' from the tags display on posts
@@ -94,4 +96,6 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Add disqus comment section for posts and notes
 - [ ] Add effect when the site is set mute
 - [ ] Add the option to display images for New Year's Bingo Card items - see /static/open/2025/isuzu-19060-wasp.jpg
+- [ ] Pin post showing how to use te site
+- [ ] Add styling for YouTube embeds
 
