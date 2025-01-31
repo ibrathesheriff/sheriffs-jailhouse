@@ -318,7 +318,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         progressBar.innerHTML = '░'.repeat((window.innerWidth * 0.40) / 9);
         let progressBarPos = 0;
         const fullProgressBarLength = progressBar.innerHTML.length;
-        let numSections = fullProgressBarLength;
+        let numSections = fullProgressBarLength / 2;
+        if (window.innerWidth <= 768) {
+            // reduce the section size for smaller devices
+            numSections = fullProgressBarLength;
+        }
         let lastTime = 0;
         let currentSheriffIs = 0;
 
