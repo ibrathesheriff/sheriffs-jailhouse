@@ -98,4 +98,5 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Add the option to display images for New Year's Bingo Card items - see /static/open/2025/isuzu-19060-wasp.jpg
 - [ ] Pin post showing how to use te site
 - [ ] Add styling for YouTube embeds
+- [ ] Add a game like the no Internet Chrome game
 
