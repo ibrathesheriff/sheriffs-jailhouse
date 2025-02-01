@@ -45,6 +45,7 @@ My experience in Academia, Entrepreneurship and Software Development have expose
 + NASM Assembly
 + HTML
 + CSS
++ Sass
 + JavaScript
 + PHP (that's right, I used to write PHP once upon a time!)
 + MySQL

@@ -327,9 +327,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let currentSheriffIs = 0;
 
         const sheriffIsList = ["Code Educator", "Dev", "Tutor", "Web Developer", "Pythoneer",
-            "Problem-Solver", "Java", "C", "NASM", "HTML/CSS", "JavaScript", "Python", "Numpy",
-            "Flask", "Tornado", "Vue.js", "MySQL", "MariaDB", "SQLAlchemy", "Maven", "Git", "Bash",
-            "Twilio", "Pythonanywhere", "DigitalOcean"];
+            "Problem-Solver", "Java", "C", "NASM", "HTML/CSS", "JavaScript", "Sass", "Python",
+            "Numpy", "Flask", "Tornado", "Vue.js", "MySQL", "MariaDB", "SQLAlchemy", "Maven", 
+            "Git", "Bash", "Twilio", "Pythonanywhere", "DigitalOcean"];
 
         function step(timeStamp) {
             let deltaTime = timeStamp - lastTime;

@@ -9,7 +9,8 @@
             <a class="neon-orange-anchor" href="/tags/{{ . | urlize }}">{{ . }}</a> |
             {{ end }}
             <br>
-            <strong>reading time</strong>: <strong>{{ math.Round (div (countwords .Content) 200.0) }}</strong> minutes
+            {{ $readTime := math.Round (div (countwords .Content) 200.0) }}
+            <strong>reading time</strong>: <strong>{{ math.Max $readTime 1 }}</strong> minutes
         </p>
         <p>
             by <strong>@{{ .Params.Author }}</strong> <a target="_blank" href="https://x.com/ibrathesheriff">
