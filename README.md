@@ -99,4 +99,4 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Pin post showing how to use te site
 - [ ] Add styling for YouTube embeds
 - [ ] Add a game like the no Internet Chrome game
-
+- [ ] Private view to keep track a track of purchased devices over a vertical timeline 
