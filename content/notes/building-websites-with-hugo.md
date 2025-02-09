@@ -42,6 +42,8 @@ There's no better way to make a snappy content site than by serving static pages
 ## Chapter 1: Kicking the Tires
 
 ### Installation
+
+#### Ubuntu
 Following the instructions from the [Hugo Installation](https://gohugo.io/installation/) page you can install Hugo's single binary by using the following command:
 ```shell
 sudo apt install hugo
@@ -53,6 +55,16 @@ hugo version
 ```
 
 The hugo command has several subcommands that you'll use as you build your site. You can see a list of all commands with `hugo help`.
+
+#### Windows
+Follow the instruction from the [Hugo website](https://gohugo.io/installation/windows/). Start by installing [Git](https://git-scm.com/downloads/win), Go, and Dart Sass as they are commonly used when working with Hugo.
+
+For Go see the [Download and install](https://go.dev/doc/install) section  of the Go website.
+
+Then to install Hugo from CMD run:
+```shell
+winget install Hugo.Hugo.Extended
+```
 
 ### Creating Your Site
 Hugo has a built-in command that generates a website project for you; this includes all of the files and directories you need to get started.

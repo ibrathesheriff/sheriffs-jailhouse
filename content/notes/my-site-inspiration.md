@@ -23,9 +23,15 @@ I created my initial version of my personal site in September 2022 by implementi
 
 ![Ronin colorlib template preview](/notes/personal/site/ronin-free-template.jpg)
 
-I wanted to create a personal site but didn't know where to get started with the design process so I decided to go for the mimic approach. I was drawn to the [Ronin template](https://colorlib.com/wp/template/ronin/) as it looked simple and professional.
+I wanted to create a personal site but didn't know where to get started with the design process so I decided to go for the mimic approach.
 
-To view screenshots of the old site check the [Sheriff's Museum](/museum)
+> Good artists copy. Great artists steal. - Pablo Picasso
+
+I feel at this point in my web development journey I preferred to mimic or work with templates as designing from scratch felt intimidating.
+
+I was drawn to the [Ronin template](https://colorlib.com/wp/template/ronin/) as it looked simple and professional.
+
+To view screenshots of the old site design check out the [Sheriff's Museum](/museum)
 
 ## Current site
 
@@ -36,9 +42,9 @@ So when I decided to redesign my personal site, I started with this photo from t
 
 ![Screenshot of view of hard drive from the Silo TV Show](/notes/personal/site/silo-harddrive-screenshot.jpeg)
 
-I loved that the operating system had a green base colour and sprinkles of orange just like current colour scheme [Hacker Bytes](https://hackerbytes.hackthedegree.com/). I also loved the simplicity of the design and just how old school it looked.
+I loved that the operating system had a green base colour and sprinkles of orange just like the [Hacker Bytes](https://hackerbytes.hackthedegree.com/) colour palette. I also loved the simplicity of the design and just how "old school" it looked.
 
-To expand on this design I idea I then googled images of old monochrome PCs:
+To expand on this design idea I then googled images of old monochrome PCs:
 
 ![IBM monochrome PC](/notes/personal/site/IBM_PC_5150.jpg)
 
@@ -51,10 +57,14 @@ This inspiration led to:
     - history -c
     - using arrows to view previously executed commands
     - using arrows to navigate image galleries
-+ **Fixed size list view** that requires you to scroll the items.
-+ A focus on using as few colours as possible: green, orange, white and grey.
++ **Fixed size list view** that requires you to scroll the items. I wanted the User to remain in one place and hence have the header, list view content and footer appear fixed. I wanted the design to feel minimalist, to have a *limited* feel to it.
++ A focus on using as few colours as possible: green, orange, white and grey. I initially wanted to push for a full monochrome palette actually.
+
+Design concerns:
++ **Bash navigation system**. Though I think it's cool and I will be able to use it, it's unclear yet how I will let visitors experience this feature.
++ **Not everyone's cup of tea**. The design is very tech based which might appear very strange to non-programmers. I intend to share some of my posts with students, I wonder how the User Experience will be for them.
 
 ### Other influences
-+ Whenever I am stuck on how to position an element or display something I start by looking at how [Guide Fari](https://guidefari.com/) has done it. He doesn't call his personal site a blog or even a personal site, just a digital garden. When I started the redesign I was not looking to create a blog or digital CV, just a space to be myself online.
-+ Elements from [Brittany Chiang](https://brittanychiang.com/)'s blog inspired my projects image.
++ Whenever I am stuck on how to position an element or display something I started by looking at how [Guide Fari](https://guidefari.com/) had implemented it. He doesn't call his personal site a blog or even a personal site, just a digital garden. When I started the redesign I was not looking to create a blog or digital CV, just a space to be myself online so he's site design had a similar underlying philosophy.
++ Elements from [Brittany Chiang](https://brittanychiang.com/)'s blog inspired my Project display page.
 + Elements from [Jamie Zawinski](https://www.jwz.org/about.html)'s blog inspired my About page.
