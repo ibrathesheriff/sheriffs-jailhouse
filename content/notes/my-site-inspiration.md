@@ -62,7 +62,7 @@ This inspiration led to:
 
 Design concerns:
 + **Bash navigation system**. Though I think it's cool and I will be able to use it, it's unclear yet how I will let visitors experience this feature.
-+ **Not everyone's cup of tea**. The design is very tech based which might appear very strange to non-programmers. I intend to share some of my posts with students, I wonder how the User Experience will be for them.
++ **Not everyone's cup of tea**. The design is very nerdy and tech-based which might appear very strange to non-programmers. I intend to share some of my posts with students, I wonder how the User Experience will be for them.
 
 ### Other influences
 + Whenever I am stuck on how to position an element or display something I started by looking at how [Guide Fari](https://guidefari.com/) had implemented it. He doesn't call his personal site a blog or even a personal site, just a digital garden. When I started the redesign I was not looking to create a blog or digital CV, just a space to be myself online so he's site design had a similar underlying philosophy.
