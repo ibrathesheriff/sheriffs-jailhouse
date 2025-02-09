@@ -72,6 +72,7 @@ My personal site is licensed under the [MIT License](https://mit-license.org/).
 If you encounter any issues or have suggestions, please open an issue or reach out on the Discussions tab.
 
 ## TODO 📋
+- [ ] Add styling for inline <code> elements.
 - [ ] Select a main font for the site
 - [ ] Document general categories, tags and keyword rules.
 - [ ] Add a related section to link to related blog posts or notes
