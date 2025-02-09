@@ -6,8 +6,8 @@ draftMode: false
 author: ibrathesheriff
 description: "This is a post about..."
 categories:
-- Personal
-- Thoughts
+- web-development
+- cli
 tags:
 - software
 - html

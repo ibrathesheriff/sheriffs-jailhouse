@@ -1,0 +1,37 @@
+{{ define "main" }}
+<article class="post-page-content-container">
+    <div class="two-column-box">
+        <header class="post-metadata-header two-column-box__column--60">
+            <h1>{{ .Title }}</h1>
+            <p>
+                <strong>published</strong>: {{ .Date.Format "January 2, 2006" }}
+                <br>
+                <strong>tags</strong>: {{ range .Params.tags }}
+                <a class="green-anchor" href="/tags/{{ . | urlize }}">{{ . }}</a> |
+                {{ end }}
+                <br>
+                {{ $readTime := math.Round (div (countwords .Content) 200.0) }}
+                <strong>reading time</strong>: <strong>{{ math.Max $readTime 1 }}</strong> minutes
+            </p>
+            <p>
+                by <strong>@{{ .Params.Author }}</strong> <a target="_blank" href="https://x.com/ibrathesheriff">
+                    <img class="img-icon-medium" src="{{ "img/icons/small/twitter.png" | absURL }}"
+                        alt="ibrathesheriff x/twitter icon">
+                </a>
+            </p>
+        </header>
+
+        <div class="two-column-box__column--40">
+            <img src="{{ "img/landing/thesheriff.png" | absURL }}" alt="An image the Sheriff - ibrathesheriff"
+                class="image-width-60">
+        </div>
+    </div>
+
+
+    <section style="padding: 5%;">
+        <div class="markdown-container">
+            {{ .Content }}
+        </div>
+    </section>
+</article>
+{{ end }}

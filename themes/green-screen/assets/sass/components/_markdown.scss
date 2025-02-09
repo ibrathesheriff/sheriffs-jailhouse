@@ -161,6 +161,7 @@
 
 /* markdown styles for lists */
 
+/* unordered list */
 .markdown-container>ul {
     margin-top: 0.5%;
     margin-bottom: 0.5%;
@@ -181,6 +182,36 @@
 }
 
 .markdown-container>ul li {
+    padding-bottom: 1%;
+}
+
+/* ordered list */
+.markdown-container>ol {
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left: 1%;
+    font-size: 1.2em;
+}
+
+.markdown-container ol>li ol {
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.markdown-container ol>li ul {
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.markdown-container ol>li ol>li ol {
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.markdown-container>ol li {
     padding-bottom: 1%;
 }
 

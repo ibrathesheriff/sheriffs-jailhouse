@@ -5,19 +5,42 @@
 
     &__left {
         text-align: left;
+        align-items: center;
     }
 
     &__right {
         text-align: right;
-    }
+        align-items: center;
 
-    @media (max-width: 768px) {
-        display: block;
+        a {
+            padding-right: 1.5%;
+        }
+
+
+        @media (min-width: 768px) {
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            a {
+                display: block;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            text-align: center;
+            a {
+                display: block;
+            }
+        }
     }
 
     @media (max-width: 480px) {
         display: block;
     }
+
+
 }
 
 .central-box {
@@ -47,6 +70,14 @@
                 display: none;
             }
         }
+    }
+
+    &__column--40 {
+        flex: 40%;
+    }
+
+    &__column--60 {
+        flex: 60%;
     }
 
     &__column--80 {

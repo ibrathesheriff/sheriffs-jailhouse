@@ -1,17 +1,15 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-lastmodified: {{ .Date }}
 draft: false
-draftMode: false
 author: ibrathesheriff
-description: "This is a note about..."
+description: "This is a episode about..."
 categories:
-- web-development
-- hacking
+- breaking-computers
+- hardware
 tags:
+- troubleshooting
 - software
-- html
 keywords:
 - jabberwocky
 ---

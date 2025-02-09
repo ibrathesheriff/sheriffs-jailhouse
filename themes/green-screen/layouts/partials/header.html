@@ -1,4 +1,5 @@
 <header class="left-right-box green-box">
+
     <div class="left-right-box__left page-header__left-section">
         <a href="/" class="green-anchor">{{ site.Title }} ~ $
             {{ $var := .IsHome }}
@@ -15,17 +16,19 @@
                 {{ else }}
                 cat
                 {{ end }}
-                {{ .RelPermalink | strings.TrimSuffix "/" }}{{ if eq $pathIndex 1 }}/{{ else }}.md{{ end }}<!-- and then add the end of the command -->
+                {{ .RelPermalink | strings.TrimSuffix "/" }}{{ if eq $pathIndex 1 }}/{{ else }}.md{{ end
+                }}<!-- and then add the end of the command -->
             </span>
             {{ end }}
         </a>
     </div>
-    <div class="left-right-box__right page-header__right-section">
-        <nav>
-            <a href="/posts" class="green-anchor">~/posts</a>
-            <a href="/notes" class="green-anchor">~/notes</a>
-            <a href="/projects" class="green-anchor">~/projects</a>
-            <a href="/about" class="green-anchor">~/about</a>
-        </nav>
-    </div>
+
+    <nav class="left-right-box__right page-header__right-section">
+        <a href="/posts" class="green-anchor">~/posts</a>
+        <a href="/episodes" class="green-anchor">~/episodes</a>
+        <a href="/notes" class="green-anchor">~/notes</a>
+        <a href="/projects" class="green-anchor">~/projects</a>
+        <a href="/about" class="green-anchor">~/about</a>
+    </nav>
+
 </header>
