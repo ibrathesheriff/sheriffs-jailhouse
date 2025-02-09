@@ -17,6 +17,9 @@ keywords:
 ---
 A cheatsheet of the command prompt version of commonly used bash commands because I'm tired of googling these.
 
+## Open cmd
+**Windows Key + R** to open the Run program and type "cmd" and then hit Enter to open a new Command Prompt shell.
+
 ## cd
 Lucky you, this is just `cd`!
 
@@ -25,12 +28,15 @@ Lucky you, this is just `cd`!
 dir
 ```
 
-## touch
+## cat
 ```shell
 type nul > your_file.txt
 ```
 
-## cat
+## mkdir
+Lucky you, this is just `mkdir`!
+
+## touch
 ```shell
 type nul > your_file.txt
 ```
