@@ -83,7 +83,7 @@ Based on Odysseas's takeaways from reading *How to take smart notes* by Sönke A
 8. Then navigate to the `Core plugins` section and ensure "Templates" and "Backlinks" is toggled on.
     - You add "Community plugins" if you would like but keep it simple, adding too many plugins can overcomplicate the system.
 9. Create a template for "Main Notes" - timestamp: **22:30**-**24:03**.
-10. Create a new note - timestamp: **24:03**-**24:58**. Use "Ctrl + O".
+10. Create a new note - timestamp: **24:03**-**24:58**. Use "Ctrl + O". Then once it's open you can use "Ctrl + T" to apply a template to the note.
     - Odysseas then discusses how to write a note and comments on avoiding passive learning.
     - Keep notes short - below 500 words. Try have it fit on one page.
     - Tackle one idea at a time in a note. You can break things over multiple notes and link them together.
