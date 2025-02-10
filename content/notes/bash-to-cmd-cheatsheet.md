@@ -40,3 +40,6 @@ Lucky you, this is just `mkdir`!
 ```shell
 type nul > your_file.txt
 ```
+
+## exit
+Lucky you, this is just `exit`!
