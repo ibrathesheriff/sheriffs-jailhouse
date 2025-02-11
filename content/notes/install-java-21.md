@@ -1,5 +1,5 @@
 ---
-title: "Install Java 21"
+title: "How to Install Java 21 (Ubuntu)"
 date: 2025-02-01T19:47:50+02:00
 lastmodified: 2025-02-01T19:47:50+02:00
 draft: false

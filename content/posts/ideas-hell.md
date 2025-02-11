@@ -1,5 +1,5 @@
 ---
-title: "Ideas Hell"
+title: "Ideas Hell and a potential solution"
 date: 2025-02-11T00:06:14+02:00
 draft: false
 draftMode: false
@@ -17,6 +17,8 @@ keywords:
 Ideas are like a drug - they give you a high and get you excited. The execution element though tends to be hard labour so as the initial burst of energy fades I give up on the idea and jump onto the next one like an addict in pursuit of his next fix.
 
 > The graveyard is the richest place on earth, because it is here that you will find all the hopes and dreams that were never fulfilled, the books that were never written, the songs that were never sung, the inventions that were never shared, the cures that were never discovered, all because someone was too afraid to take that first step, keep with the problem, or determined to carry out their dream. - Les Brown
+
+Ideas hell is when I'm stuck in a loop moving from one idea to the next without any substantial implementation to show for it.
 
 What I need to do is work on one idea at a time, understanding that they must be processed in a queue: first-in-first-out. A great approach is [Project Staggering](https://www.youtube.com/watch?v=sxKu2a8glEE&ab_channel=JamesLim), where you sprint to get a project deployed and then spend time figuring out the maintenance tasks. Once the project is stable you can start working on the next one.
 
