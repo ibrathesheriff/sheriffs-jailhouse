@@ -69,3 +69,8 @@ I am a air traffic controller that needs to facilitate the take-off of multiple 
     - The source code
     - Development processes
     - Tooling - these days I like to even add notes on tools so there is a resource to use if I ever get stuck or forget that one useful command.
+
+## Accumulation of projects over time
+![Image showing multiple front-loaded energy curves of an accumulation of projects](/posts/project-management/accumulation-of-projects-over-time.png)
+
+*Courtesy of Andre Knol*

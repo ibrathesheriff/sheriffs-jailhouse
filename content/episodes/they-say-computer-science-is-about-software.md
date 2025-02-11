@@ -46,7 +46,7 @@ So I gave it a Google and ended up on the well titled Dell Community conversatio
 ![Optiplex 7010 Dell memory slots](/episodes/breaking-computers/memory-slots.png)
 
 ### 3. The Dell Optiplex 7010 has four memory slots, remove the memory, and switch slots.
-So this is the moment I totaly made my waranty void. Oops...
+So this is the moment I totally made my warranty void. Oops... I put the evidence on the web as well, just wow!
 
 ![Fixing the memory slot placement](/episodes/breaking-computers/void-the-warranty.png)
 
