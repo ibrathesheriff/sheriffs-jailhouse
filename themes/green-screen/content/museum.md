@@ -5,7 +5,7 @@ author: ibrathesheriff
 nickname: "ibra"
 description: "A view of old versions of the ibrathesheriff.com"
 layout: "museum"
-landingPage: "museum/landing-page.png"
+landingPage: "/img/museum/landing-page.png"
 images:
 - /img/museum/projects.png - projects page
 - /img/museum/open.png - open page
