@@ -41,5 +41,10 @@ Lucky you, this is just `mkdir`!
 type nul > your_file.txt
 ```
 
+## clear
+```shell
+cls
+```
+
 ## exit
 Lucky you, this is just `exit`!
