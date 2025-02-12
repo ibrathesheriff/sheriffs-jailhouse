@@ -30,9 +30,9 @@ The goal of the video:
 To do this a technical writer requires:
 + Substance
     - **Write something that matters**. All the buzzwords in the world can't save your writing if it doesn't have substance.
-    - **Do your home**. Know the topic you're writing about and what's been written about it.
+    - **Do your homework**. Know the topic you're writing about and what's been written about it.
     - **What's missing**? Once you've done your homework, figure out what's missing.
-    - **Substance takes hard work**. Expect to put an hour or more into every minute the reader will spend reading.
+    - **Substance takes hard work**. Expect to *put an hour* or more into *every minute* the reader will spend reading.
 + Packaging
     - Package that substance for consumption.
     - Packaging is very important.
