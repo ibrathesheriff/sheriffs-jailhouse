@@ -69,7 +69,7 @@ I had given the system time to propagate my changes so I revisited [ibrathesheri
 
 So I rolled my sleeves and hit Google like a maniac. I bumped into a Cloudflare community conversation titled: [Cloudflare Pages doesn’t work with custom domain (on cloudflare)](https://community.cloudflare.com/t/cloudflare-pages-doesnt-work-with-custom-domain-on-cloudflare/539980) and found the solution that saved the day (shout out to **services56**):
 
-![Cloudflare Pages custom domain not working solution](/img/episodes/wtf/nameserver-cloudflare-custom-domain-solution.png)
+![Cloudflare Pages custom domain not working solution](/img/episodes/wtf/nameserver-cloudflare-custom-domain-solution-service56.png)
 
 So I implemented the solution by changing my nameserver record from on my PC from `127.0.0.1` to 8.8.8.8 (Google's DNS) so that my PC would fetch records from there rather instead of working from my cache as it was stuck in the past.
 
