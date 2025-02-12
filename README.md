@@ -97,7 +97,7 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Improve the display of images in markdown i.e. notes and posts
 - [ ] Add scroll to the project content side for the projects single display page
 - [ ] Add a 404 page
-- [ ] Add disqus comment section for posts and notes
+- [ ] Add disqus comment section for episodes, posts and notes
 - [ ] Add effect when the site is set mute
 - [ ] Add the option to display images for New Year's Bingo Card items - see /static/open/2025/isuzu-19060-wasp.jpg
 - [ ] Pin post showing how to use te site

@@ -153,7 +153,7 @@ function playAudio(audioFile) {
             let audioObj = new Audio(audioFile);
             audioObj.play();
         }
-    } catch(err) {
+    } catch (err) {
         console.error(`Failed to play ${audioFile} audio: `, err);
     }
 }
@@ -186,6 +186,30 @@ function updateImageListDisplay(keyEntered, index, imagePaths, headings, display
         imageHeading.innerHTML = headings[index];
     }
     return index;
+}
+
+function addTargetBlankToAnchors() {
+    const markdownBlocks = document.getElementsByClassName("markdown-container");
+    if (markdownBlocks.length == 0) {
+        // no markdown block to process
+        return;
+    }
+
+    for (let mb = 0; mb < markdownBlocks.length; mb++) {
+        // process the markdown block children
+        const markdownElements = markdownBlocks[mb].children;
+        for (let i = 0; i < markdownElements.length; i++) {
+            if (markdownElements[i].tagName === 'P') {
+                let paragraphElements = markdownElements[i].children;
+                for (let j = 0; j < paragraphElements.length; j++) {
+                    // search for anchor tags in the paragraphs
+                    if (paragraphElements[j].tagName === 'A') {
+                        paragraphElements[j].setAttribute("target", "_blank");
+                    }
+                }
+            }
+        }
+    }
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -238,6 +262,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
             });
         }
     }
+
+    // handle markdown additional rendering
+    addTargetBlankToAnchors();
+
     // handle entry of instructions
     const bashCommandContainer = document.getElementById("bash-command");
     const terminalBellAudio = "/audio/bicycle-bell.mp3";
@@ -265,7 +293,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 bashCommandContainer.innerHTML = "";
                 return;
             }
-            
+
             const commandCheckStatus = checkCommand(currentText);
             if (commandCheckStatus.isValid()) {
                 const temp = currentText.split(" ");
@@ -328,7 +356,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         const sheriffIsList = ["Code Educator", "Dev", "Tutor", "Web Developer", "Pythoneer",
             "Problem-Solver", "Java", "C", "NASM", "HTML/CSS", "JavaScript", "Sass", "Python",
-            "Numpy", "Flask", "Tornado", "Vue.js", "MySQL", "MariaDB", "SQLAlchemy", "Maven", 
+            "Numpy", "Flask", "Tornado", "Vue.js", "MySQL", "MariaDB", "SQLAlchemy", "Maven",
             "Git", "Bash", "Twilio", "Pythonanywhere", "DigitalOcean"];
 
         function step(timeStamp) {
