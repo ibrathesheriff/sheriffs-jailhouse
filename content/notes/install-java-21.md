@@ -7,8 +7,9 @@ draftMode: false
 author: ibrathesheriff
 description: "This is a note contains instructions on how to install Java 21 and switch between different versions of Java."
 categories:
-- install
+- installation
 tags:
+- installation
 - java
 keywords:
 - java

@@ -3,7 +3,7 @@ title: "They Say Computer Science Is About Software"
 date: 2025-02-09T14:57:17+02:00
 draft: false
 author: ibrathesheriff
-description: "This episode illustrates why people think Computer Science people can fix hardware issues."
+description: "This episode illustrates why people think Computer Science folks can fix hardware issues."
 categories:
 - hardware
 tags:

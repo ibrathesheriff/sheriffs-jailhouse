@@ -4,7 +4,7 @@ date: 2025-01-24T23:19:03+02:00
 draft: false
 draftMode: false
 author: ibrathesheriff
-description: "This is a post about introducing myself to the world I think."
+description: "This is a post about introducing ibrathesheriff to the world I think."
 categories:
 - thoughts
 - why

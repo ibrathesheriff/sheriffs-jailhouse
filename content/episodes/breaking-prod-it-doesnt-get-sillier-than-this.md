@@ -10,6 +10,8 @@ categories:
 tags:
 - breaking-prod
 - logging
+- python
+- recursion
 keywords:
 - breaking-prod
 ---
@@ -20,9 +22,11 @@ I wish I had listened to the sweet sweet advice given in this meme:
 Because if I had, I would avoided one of the strangest bugs I have ever introduced into a system. Have you ever accidentally implemented a recursive routine?
 
 ## It all began with an error log
-The wonderful folks at Crowdstrike define a error log as *a file that contains detailed records of error conditions a computer software encounters when it's running*.
+The wonderful non-controversial folks at Crowdstrike define an error log as *a file that contains detailed records of error conditions a computer software encounters when it's running*.
 
-While working on [RINAIBRA](/projects/rinaibra) I decided to setup an error log using a database table. Each time an unexpected exception was experienced the error condition information was added to the database and an email was sent to me to notify me about the issue.
+While working on [RINAIBRA](/projects/rinaibra) I decided to setup an error log using a database table. That's right, I created my own logging system. Libraries for who? Those were the good old days!
+
+So each time an unexpected exception was experienced the error condition information was added to the database and an email was sent to me to notify me about the issue.
 
 > Ahh programming, where you're the detective and you're the criminal and you plant evidence to make it easy to get yourself caught by yourself. - @thecompanioncube4211, YouTube
 
@@ -55,7 +59,7 @@ if user is None:
     return get_status_response("Request failed. Please try again.")
 ```
 
-So just before communicating that an error occurred to the User the `log_unexpected_error` function was called.
+So just before communicating to the User that an error occurred, the `log_unexpected_error` function was called.
 
 ## This looks simple enough, where did things go wrong?
 Remember the last line of the `log_unexpected_error` function:
@@ -72,16 +76,16 @@ try:
         server.sendmail(sender_email, receiver_email, message.as_string())
         server.close()
         return True
-    except Exception as e:
-        db.log_unexpected_error("emailer.send_email()",
-                                "Failed to send an email to " + receiver_email + " causing exception: " + str(e))
+except Exception as e:
+    db.log_unexpected_error("emailer.send_email()",
+                            "Failed to send an email to " + receiver_email + " causing exception: " + str(e))
 
     return False
 ```
 Everything seems fine initially, but a closer look reveals a curious sequence of function calls.
 
 **Q**: Wait why is the `send_email` function calling the `log_unexpected_error` function?  
-**A**: My 3AM brain's answer was, if the platform fails to send an email because an error occurs there should be an error log entry for that. It's an error after all.
+**A**: My 3AM brain's answer was - if the platform fails to send an email because an error occurs there should be an error log entry for that. It's an error after all.
 
 You guessed it, I forgot to account for the emailing system crashing. [RINAIBRA](/projects/rinaibra) was a maintenance communication system after all, the email system could never go down because how would our Users receive notifications?
 
@@ -114,7 +118,7 @@ I was like what the hell! How is this possible? I do not use any recursion in th
 It wasn't making sense why this error was occurring, it felt so random so I opened a SQL console and queried the `error_logs` table to view the most recently added records. That's what led me to the `send_email` function as all the recent logs referenced this function. I then reviewed the `log_unexpected_error` function code and it hit me.
 
 ### Accidental recursion
-So as Users completed actions related to maintenance issues or move-in forms notifications were sent via email using the `send_email` function. The surge of emails caused the platform to hit the maximum allowed outgoing email requests for the day meaning the `send_email` function started to fail to fulfil email requests so an exception occurred and the `log_unexpected_error` function was called.
+So as Users completed actions related to maintenance issues or move-in forms, notifications were sent via email using the `send_email` function. The surge of emails caused the platform to hit the maximum allowed outgoing email requests for the day meaning the `send_email` function started to fail to fulfil email requests so an exception occurred and the `log_unexpected_error` function was called.
 
 The `log_unexpected_error` function would then add the error log to the database and attempt to notify me about the error via email by using the `send_email` function. The `send_email` function would fail to fulfil the email request to notify me as Gmail had blocked the platform for the day so it would call the `log_unexpected_error` function which would add the error log to the database and try to notify me about the error via email using the `send_email` function. This loop would keep on going until Python gave up on tracking the function calls and hence raised the `RecursionError`.
 
@@ -131,7 +135,7 @@ This incorporates *"directly or indirectly"*. By accident I had created an examp
 ### Getting the platform to be responsive again
 ![Meme about standing back as I try run a fix directly onto prod](/img/episodes/memes/stand-back-trying-this-in-production.jpg)
 
-I could not get Gmail to unblock us in a timely manner. The only option I was to wait a day but that didn't make sense as Users would not be able to use the platform all day. So the only sensible option was to break the recursion. This was simple, if the error log request came from a function that was directly responsible for sending emails the `log_unexpected_error` function would not attempt to send me an email to notify me about the issue.
+I could not get Gmail to unblock us in a timely manner. The only option was to wait a day but that didn't make sense as Users would not be able to use the platform all day. So the only sensible option was to break the recursion. This was simple, if the error log request came from a function that was directly responsible for sending emails the `log_unexpected_error` function would not attempt to send me an email to notify me about the issue.
 
 ```python
 if function != "emailer.send_multiple_emails()" and function != "emailer.send_email_with_no_logo()" and \
@@ -170,6 +174,7 @@ logger no sends an email if the issue is coming from the emailer
 
 ### How could I have avoided this: Testing (duh)
 When I start testing a function I always consider the following input situations:
++ negative numbers
 + zero
 + small numbers
 + large numbers
@@ -185,4 +190,4 @@ By the end of the day, we had *frustrated Users*.
 And I *felt quite silly*.
 
 ## Breaking things happens
-[RINAIBRA](/projects/rinaibra) was my very first startup experience as the tech lead. Early on, I was solely responsible for all the platform development. I was still a University student so I made so many rookie mistakes but I would do it all again. Though having a system crashing can be stressful, I always laughed about it after deploying the fix.
+[RINAIBRA](/projects/rinaibra) was my very first startup experience at the helm of product development. Early on, I was solely responsible for all the platform development. I was still a University student so I made so many rookie mistakes but I would do it all again. Though having a system crashing can be stressful, I always laughed about it after deploying the fix.

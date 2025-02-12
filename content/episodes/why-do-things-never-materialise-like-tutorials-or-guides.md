@@ -3,9 +3,9 @@ title: "Why do things never work out as seen in tutorials and guides"
 date: 2025-02-11T18:18:02+02:00
 draft: false
 author: ibrathesheriff
-description: "This is a episode about..."
+description: "There are times I feel tutorials and guides are like movie stunts, when you try it home it never works out as seen on the big screen."
 categories:
-- dns
+- hosting
 tags:
 - dns
 - nameservers
@@ -52,11 +52,11 @@ Done!
 ## It's not working :/
 When I navigated to [https://ibrathesheriff.com/](https://ibrathesheriff.com/) in Chrome.
 
-Instead of seeing
+Instead of seeing,
 
 ![Image of the landing page of ibrathesheriff.com](/img/episodes/wtf/ibrathesheriff-posts-page.png)
 
-I kept seeing
+I kept seeing:
 
 ![Image failing to load ibrathesheriff.com](/img/episodes/wtf/ibrathesheriff-not-displaying.png)
 
@@ -77,19 +77,19 @@ So I implemented the solution by changing my nameserver record from on my PC fro
 The reality is that tutorials and guides are setup with certain conditions in mind. For example,
 + The Reader is probably working in a Linux or Mac environment.
 + The Reader has the same settings and configuration values as me.
-+ The Reader's system isn't lacking core dependencies.
++ The Reader's system isn't lacking core dependencies or have any serious restrictions.
 
 There are many reasons why the instructions provided in a tutorial or guide may not work for you and unfortunately, it's just impossible for the writer to account for all the reasons. Especially considering that for the most part the instructions work out for 99% of Readers. I mean they worked out for [Coder Coder](https://www.youtube.com/watch?v=MTc2CTYoszY) right.
 
-It's unfortunate, because it sometimes leaves you feeling like an idiot: *"I can't even follow instructions that a 5 year old would be able to"?* Though you have done dozens of deployments, it make you second guess your skills.
+It's unfortunate, because it sometimes leaves you feeling like an idiot: *"I can't even follow instructions that a 5 year old would be able to"?* Though you have done dozens of deployments, it makes you second guess your skills.
 
 But I have found myself in these situations so often that I tend to laugh as soon as I complete the tutorial/guide and I don't get the expected output. And don't get me wrong it's frustrating, I mean I had a solid Netlify setup that I could have continued with. Netlify never showed me flames like this! Why did I break the golden rule:
-> If it ain't broke, don't fix it
+> If it ain't broke, don't fix it.
 
-I can start to question all you life decisions in moments like this lol. But what gets me through is:
+I can start to question all you life decisions in moments like this lol. But what gets me through it is:
 + Software is not perfect, you have to expect hiccups from time to time.
-+ Better sometimes requires a little more effort.
-    - I shifted from Netlify because from research I found that Cloudflare's infrastructure was better suited to serve my site faster to people around the world.
++ *Better* sometimes requires a little *more effort*.
+    - I shifted from Netlify because from research I found that Cloudflare's infrastructure was better suited to serve my site faster to people around the world. Especially, to people closer to me, folks in South Africa or Zimbabwe.
     - I mean think VPS vs. some AWS service right. I love me a VPS but AWS has a lot more to offer but it takes a little more effort to get things setup correctly.
     - But that effort is worth it if you gain access to more products, features, power, or speed.
-+ Sometimes you aren't being an idiot, you are just unlucky. I did all the steps correctly in this case, I just was not aware about my nameserver configuration situation on my PC. I mean when a deployment fails why would I ever consider that in the equation?
++ Sometimes you aren't being an idiot, you are just unlucky. I did all the steps correctly in this case, I just was not aware about my nameserver configuration situation on my PC. I mean when a deployment fails why would I ever factor that into the equation?
