@@ -7,10 +7,10 @@ description: "A view of old versions of the ibrathesheriff.com"
 layout: "museum"
 landingPage: "museum/landing-page.png"
 images:
-- museum/projects.png - projects page
-- museum/open.png - open page
-- museum/credits-and-acknowledgements.png - credits/acknowledgements page
-- museum/landing-page.png - landing page
+- img/museum/projects.png - projects page
+- img/museum/open.png - open page
+- img/museum/credits-and-acknowledgements.png - credits/acknowledgements page
+- img/museum/landing-page.png - landing page
 ---
 In September 2022, I launched this website with the intention of showcasing my skills and experience, including my portfolio of projects, technical abilities, and accomplishments.
 
