@@ -74,7 +74,6 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 ## TODO 📋
 - [ ] Mark the official v2 release and add it to the changelog
 - [ ] Add video of the Dell desktop no longer flashing orange
-- [ ] Add styling for inline <code> elements.
 - [ ] Add more metadata to the list view for posts, notes and episodes e.g. date or tags
 - [ ] Select a main font for the site
 - [ ] Document general categories, tags and keyword rules.
@@ -103,4 +102,5 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Pin post showing how to use te site
 - [ ] Add styling for YouTube embeds
 - [ ] Add a game like the no Internet Chrome game
-- [ ] Private view to keep track a track of purchased devices over a vertical timeline 
+- [ ] Private view to keep track a track of purchased devices over a vertical timeline
+- [X] Add styling for inline <code> elements.

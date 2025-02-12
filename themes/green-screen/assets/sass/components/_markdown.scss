@@ -102,6 +102,14 @@
         display: inline;
     }
 
+    p code {
+        background-color: #002B36;  /* background of the current code block style theme: solarized-dark */
+        color: #93A1A1;             /* core font colour for code block style theme: solarized-dark */
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: "Courier New", monospace;
+    }
+
     pre {
         position: relative;
         margin-top: 1%;
