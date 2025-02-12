@@ -7,10 +7,10 @@ description: "A view of old versions of the ibrathesheriff.com"
 layout: "museum"
 landingPage: "museum/landing-page.png"
 images:
-- img/museum/projects.png - projects page
-- img/museum/open.png - open page
-- img/museum/credits-and-acknowledgements.png - credits/acknowledgements page
-- img/museum/landing-page.png - landing page
+- /img/museum/projects.png - projects page
+- /img/museum/open.png - open page
+- /img/museum/credits-and-acknowledgements.png - credits/acknowledgements page
+- /img/museum/landing-page.png - landing page
 ---
 In September 2022, I launched this website with the intention of showcasing my skills and experience, including my portfolio of projects, technical abilities, and accomplishments.
 
@@ -23,6 +23,6 @@ At this point I was doing a lot of tutoring work for [Rheinmetall Barzan Advance
 
 designed to reinforce the concepts I was teaching and provide additional support for my students. 
 
-If you are interested in the elements that inspired the design my note on [My Site Inspiration](notes/my-site-inspiration/).
+If you are interested in the elements that inspired the design my note on [My Site Inspiration](/notes/my-site-inspiration/).
 
 Because the original site was built with static HTML, CSS, and JavaScript, managing individual blog posts and maintaining a consistent design proved challenging. Consequently, in 2023, I transitioned my technical blog posts to [hackthedegree](https://www.hackthedegree.com/), hence the absence of blog links on the old site. I did, however, enjoy experimenting with [MathJax](https://www.mathjax.org/) for rendering mathematical expressions on the initial blog.
