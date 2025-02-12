@@ -49,6 +49,8 @@ Johannesburg was easy. I booked a room at a Guest House that 2 of my friends wer
 
 Morgan's Bay was tricky as it's a small village. Thank goodness my friend (the groom) was very helpful. Unfortunately, all the affordable rooms were taken (of course). I also made my arrangements so late that everyone else had already paired up to share Airbnbs. I ended up booking a family beach house, imagine! 3 rooms to myself. You don't want to know the per night cost.
 
+![Image of the Morgan's Bay beach](/posts/travel/morgans-bay-beach-shot.jpg)
+
 Cape Town was easy. I found an affordable granny flat on Airbnb that cost only R100 ($5) more than the Johannesburg spot.
 
 Stellenbosch the best. I stayed with a friend.
@@ -58,7 +60,9 @@ Johannesburg, Cape Town and Stellenbosch were straightforward. I could just use 
 
 Morgan's Bay was a nightmare. Firstly, I thought it was a few minutes from East London. It was more like 1 hour 20 minutes. Uber was not an option and I didn't have time to organise a shuttle or taxi so I decided to rent a car.
 
-As I knew nothing about process I went with the well named, [First Car Rental](https://www.firstcarrental.co.za/). I paid the rental fee online but was shocked when I got to the airport and realised that they would put a hold on my credit card for the liability fee, about R5000 ($271). *The takeaway here folks, is doing things last minute means you do not have enough time to do thorough research*. First Car Rental actually froze the funds for past a week after I returned the car. This put my budget out of wack and left me abusing savings from my Old Mutual Unit Trust.
+![Image of the Suzuki Swift that I rented from First Car Rental](/posts/travel/first-car-rental-suzuki-swift.jpg)
+
+As I knew nothing about process I went with the well named, [First Car Rental](https://www.firstcarrental.co.za/). I paid the rental fee online for a Suzuki Swift but was shocked when I got to the airport and realised that they would put a hold on my credit card for the liability fee, about R5000 ($271). *The takeaway here folks, is doing things last minute means you do not have enough time to do any sort of basic research*. First Car Rental actually froze the funds for past a week after I returned the car. This put my budget out of wack and left me abusing savings from my Old Mutual Unit Trust.
 
 Once again if I had started planning this trip earlier I could have carpooled with other guests.
 

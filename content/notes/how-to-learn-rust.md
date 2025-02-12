@@ -17,7 +17,7 @@ keywords:
 ---
 Firstly, before we get into the topic, don't search *"rust youtubers"* on YouTube you will just get videos of a bunch of YouTubers playing the game Rust:
 
-![Rust game](/notes/learning/rust/rust-pc-mac-game-steam-cover.jpg)
+![Rust game](/img/notes/learning/rust/rust-pc-mac-game-steam-cover.jpg)
 
 ## Why do I want to learn Rust?
 + **I miss the joy of learning**. Studying Computer Science was amazing because I got to learn so many cool things all the time.

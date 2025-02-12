@@ -13,7 +13,7 @@ technologies:
 - liblec
 timelineStart: "2016"
 timelineEnd: "2017"
-image: "projects/leafsoft-grades.jpeg"
+image: "img/projects/leafsoft-grades.jpeg"
 projectUrl: "https://github.com/leafsoftpl"
 ---
 Leafsoft Grades is a student management system which allows schools to have a central store of student personal information, track academic progress and store attendance records. It is the flagship product of [Leafsoft PL](https://github.com/leafsoftpl) and was my first major startup experience.

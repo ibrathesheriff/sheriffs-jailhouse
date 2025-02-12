@@ -17,7 +17,7 @@ technologies:
 - Bash
 timelineStart: "2020"
 timelineEnd: "January 2023"
-image: "projects/rinaibra.png"
+image: "img/projects/rinaibra.png"
 projectUrl: "https://www.sun.ac.za/english/Lists/news/DispForm.aspx?ID=8988"
 ---
 [RINAIBRA](https://www.sun.ac.za/english/Lists/news/DispForm.aspx?ID=8988) was a Maintenance Communication System(MCS) which allows tenants to report maintenance issues so that maintenance administrators can coordinate their repair.

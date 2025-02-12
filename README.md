@@ -72,6 +72,7 @@ My personal site is licensed under the [MIT License](https://mit-license.org/).
 If you encounter any issues or have suggestions, please open an issue or reach out on the Discussions tab.
 
 ## TODO 📋
+- [ ] Mark the official v2 release and add it to the changelog
 - [ ] Add video of the Dell desktop no longer flashing orange
 - [ ] Add styling for inline <code> elements.
 - [ ] Add more metadata to the list view for posts, notes and episodes e.g. date or tags

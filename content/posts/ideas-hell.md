@@ -47,7 +47,7 @@ or
 ## Front-loaded energy curves
 Lucky for us the energy that we need to exert to a project tends to look like this:
 
-![Image of front-loaded energy curve](/posts/project-management/front-loaded-energy-curves.png)
+![Image of front-loaded energy curve](/img/posts/project-management/front-loaded-energy-curves.png)
 
 This front-loaded energy curve shows how to get a project to take-off requires an immense amount of effort upfront. Most of us fall off in the initial period. But we can relate this to starting a job:
 + You need to figure out who do you ask for what.
@@ -73,6 +73,6 @@ I am a air traffic controller that needs to facilitate the take-off of multiple 
     - Tooling - these days I like to even add notes on tools so there is a resource to use if I ever get stuck or forget that one useful command.
 
 ## Accumulation of projects over time
-![Image showing multiple front-loaded energy curves of an accumulation of projects](/posts/project-management/accumulation-of-projects-over-time.png)
+![Image showing multiple front-loaded energy curves of an accumulation of projects](/img/posts/project-management/accumulation-of-projects-over-time.png)
 
 *Courtesy of Andre Knol*

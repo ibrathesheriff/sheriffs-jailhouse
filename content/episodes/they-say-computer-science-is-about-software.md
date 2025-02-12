@@ -16,13 +16,13 @@ As soon as you sign up for a Computer Science degree there are two common reques
 + Hey, I hear you study CS, could you code a social media app for Cats that want to meet Dogs for me?
 + Hey, I hear you study CS, so you know computers right? Could you please fix my printer for me?
 
-![Printer meme comic](/episodes/memes/fix-my-printer-meme-1.png)
+![Printer meme comic](/img/episodes/memes/fix-my-printer-meme-1.png)
 
 The first request is great if you feel the idea is the next billion dollar startup but the second request tends to be frustrating at times. It's frustrating because as Programmers our work relates to software not hardware. So these requests feel like asking a Podiatrist (foot Doctor) to operate on your brain. Sure they are a Doctor but where's the direct relation?
 
 Unfortunately (or fortunately, I guess it depends), Programmers tend to be techies so we tend to like learning about how Computers work to write more performant software, or we tend to spend our spare time building gaming PCs so I understand where non-programmers would get the idea that we can fix any hardware issue (printers included). There's moments where that "I don't do hardware" statement is proven false.
 
-![Will Smith printer meme](/episodes/memes/fix-my-printer-meme-2.png)
+![Will Smith printer meme](/img/episodes/memes/fix-my-printer-meme-2.png)
 
 I found myself in that situation recently when I had to fix a minor hardware issue.
 
@@ -40,15 +40,15 @@ So I gave it a Google and ended up on the well titled Dell Community conversatio
 5. Start computer!
 
 ### 2. Unplug the power & remove the computer case.
-![Optiplex 7010 Dell with the case open](/episodes/breaking-computers/dell-case-opened.png)
+![Optiplex 7010 Dell with the case open](/img/episodes/breaking-computers/dell-case-opened.png)
 
 ### Looking for the memory slots
-![Optiplex 7010 Dell memory slots](/episodes/breaking-computers/memory-slots.png)
+![Optiplex 7010 Dell memory slots](/img/episodes/breaking-computers/memory-slots.png)
 
 ### 3. The Dell Optiplex 7010 has four memory slots, remove the memory, and switch slots.
 So this is the moment I totally made my warranty void. Oops... I put the evidence on the web as well, just wow!
 
-![Fixing the memory slot placement](/episodes/breaking-computers/void-the-warranty.png)
+![Fixing the memory slot placement](/img/episodes/breaking-computers/void-the-warranty.png)
 
 ## So next time: reinforcing the misconception
 So next time someone comes to me saying their Dell desktop power button is flashing orange I will probably be able to fix it and unfortunately reinforce the misconception that Computer Science is hardware related as well.

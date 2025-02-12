@@ -21,7 +21,7 @@ This note documents the inspirations behind the design of my personal website, w
 ## Initial version of my Personal Site
 I created my initial version of my personal site in September 2022 by implementing elements of the [colorlib](https://colorlib.com/) template [Ronin](https://preview.colorlib.com/#ronin).
 
-![Ronin colorlib template preview](/notes/personal/site/ronin-free-template.jpg)
+![Ronin colorlib template preview](/img/notes/personal/site/ronin-free-template.jpg)
 
 I wanted to create a personal site but didn't know where to get started with the design process so I decided to go for the mimic approach.
 
@@ -40,15 +40,15 @@ I am a fan of Apple TV+'s sci-fi series [Silo](https://tv.apple.com/us/show/silo
 
 So when I decided to redesign my personal site, I started with this photo from the TV show:
 
-![Screenshot of view of hard drive from the Silo TV Show](/notes/personal/site/silo-harddrive-screenshot.jpeg)
+![Screenshot of view of hard drive from the Silo TV Show](/img/notes/personal/site/silo-harddrive-screenshot.jpeg)
 
 I loved that the operating system had a green base colour and sprinkles of orange just like the [Hacker Bytes](https://hackerbytes.hackthedegree.com/) colour palette. I also loved the simplicity of the design and just how "old school" it looked.
 
 To expand on this design idea I then googled images of old monochrome PCs:
 
-![IBM monochrome PC](/notes/personal/site/IBM_PC_5150.jpg)
+![IBM monochrome PC](/img/notes/personal/site/IBM_PC_5150.jpg)
 
-![Getty Images photo of old monochrome pC](/notes/personal/site/gettyimages-monochrome-PC.jpg)
+![Getty Images photo of old monochrome pC](/img/notes/personal/site/gettyimages-monochrome-PC.jpg)
 
 This inspiration led to:
 + **Bash navigation system**. I wanted to be able to get around this blog without using the mouse hence the introduction of:

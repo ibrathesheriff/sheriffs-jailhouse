@@ -15,7 +15,7 @@ keywords:
 ---
 I wish I had listened to the sweet sweet advice given in this meme:
 
-![Meme about not having any errors if there is no error log](/episodes/memes/cant-have-any-errors-if-no-error-log.jpg)
+![Meme about not having any errors if there is no error log](/img/episodes/memes/cant-have-any-errors-if-no-error-log.jpg)
 
 Because if I had, I would avoided one of the strangest bugs I have ever introduced into a system. Have you ever accidentally implemented a recursive routine?
 
@@ -129,7 +129,7 @@ This incorporates *"directly or indirectly"*. By accident I had created an examp
 ## Fixing the issue
 
 ### Getting the platform to be responsive again
-![Meme about standing back as I try run a fix directly onto prod](/episodes/memes/stand-back-trying-this-in-production.jpg)
+![Meme about standing back as I try run a fix directly onto prod](/img/episodes/memes/stand-back-trying-this-in-production.jpg)
 
 I could not get Gmail to unblock us in a timely manner. The only option I was to wait a day but that didn't make sense as Users would not be able to use the platform all day. So the only sensible option was to break the recursion. This was simple, if the error log request came from a function that was directly responsible for sending emails the `log_unexpected_error` function would not attempt to send me an email to notify me about the issue.
 

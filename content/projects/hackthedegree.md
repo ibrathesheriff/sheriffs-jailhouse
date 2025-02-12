@@ -15,13 +15,13 @@ technologies:
 - DigitalOcean
 timelineStart: "March 2023"
 timelineEnd: "present"
-image: "projects/hackthedegree.png"
+image: "img/projects/hackthedegree.png"
 projectUrl: "https://www.hackthedegree.com/"
 ---
 With [hackthedegree](https://www.hackthedegree.com/) I am attempting to build:
 > The modern-day tutoring service for programming students.
 
-I'm on a passion-fuelled mission to empower students with the art of programming. My goal is to equip them with the skills to build practical and useful programs upon graduation. [hackthedegree](https://www.hackthedegree.com/) is how intend to do that.
+I'm on a passion-fuelled mission to empower students with the art of programming. My goal is to equip them with the skills to build practical and useful programs upon graduation. [hackthedegree](https://www.hackthedegree.com/) is how I intend to do that.
 
 It's a passion project that I would like to one day support:
 + Booking tutor sessions.

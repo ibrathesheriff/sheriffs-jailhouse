@@ -41,7 +41,7 @@ I also tend to find when I repeat something to someone, or write it down I tend 
 ### 3. A place to attempt to write well to think clearly
 > Writing is thinking. To write well is to think clearly. That's why it's so hard. - David McCullough, Interview with NEH chairman Bruce Cole, Humanities, July/Aug. 2002, Vol. 23/No. 4
 
-![Before writing vs. After writing](/posts/why/writing-is-thinking.jpeg)
+![Before writing vs. After writing](/img/posts/why/writing-is-thinking.jpeg)
 
 The general writing process requires one to express their idea as a draft and then continuously refine it until they feel they have the very best, most clear, expression of their idea.
 

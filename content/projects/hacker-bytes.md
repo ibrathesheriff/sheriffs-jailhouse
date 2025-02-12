@@ -15,7 +15,7 @@ technologies:
 - DigitalOcean
 timelineStart: "February 2024"
 timelineEnd: "present"
-image: "projects/hacker-bytes.png"
+image: "img/projects/hacker-bytes.png"
 projectUrl: "https://hackerbytes.hackthedegree.com/"
 ---
 [Hacker Bytes](https://hackerbytes.hackthedegree.com/) is the the official blog of hackthedegree. It's part of the [hackthedegree project](/projects/hackthedegree) and the plan is to use unconventional learning methods to teach my students programming concepts.
