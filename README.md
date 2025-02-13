@@ -44,6 +44,12 @@ Run the following command to create a new note document:
 hugo new notes/new-note.md
 ```
 
+### Create an episode
+Run the following command to create a new episode document:
+```bash
+hugo new episodes/new-episode.md
+```
+
 ### Create a project
 Run the following command to create a new note document:
 ```bash
@@ -53,7 +59,7 @@ hugo new projects/new-project.md
 ### Create a open page for a year
 Run the following command to create a new open document:
 ```bash
-hugo new projects/2025.md
+hugo new open/2025.md
 ```
 
 ### Change the Code Highlighting Style
@@ -75,7 +81,7 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Mark the official v2 release and add it to the changelog
 - [ ] Add video of the Dell desktop no longer flashing orange
 - [ ] Add more metadata to the list view for posts, notes and episodes e.g. date or tags
-- [ ] Select a main font for the site
+- [ ] Select a main font for the site - monospace font
 - [ ] Document general categories, tags and keyword rules.
 - [ ] Add a related section to link to related blog posts or notes
 - [ ] Option to add a "resources" section in blog posts
@@ -85,13 +91,11 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Hover effect on the list view to allow a reader to view the full heading
 - [ ] Switch to Dart Sass
 - [ ] Remove the last '|' from the tags display on posts
-- [ ] Fix broken image links on the posts page
 - [ ] Update the post and note summary system
 - [ ] Complete the changelog
 - [ ] Check if a webpage exists before navigating to it in the command mode
 - [ ] Add a "help" command which explains the workings of the available commands
 - [ ] Improve the display of tags and categories
-- [ ] Setup a monospace font for the site
 - [ ] Add black border around the revolver cursor graphic
 - [ ] Improve the display of images in markdown i.e. notes and posts
 - [ ] Add scroll to the project content side for the projects single display page
@@ -102,5 +106,8 @@ If you encounter any issues or have suggestions, please open an issue or reach o
 - [ ] Pin post showing how to use te site
 - [ ] Add styling for YouTube embeds
 - [ ] Add a game like the no Internet Chrome game
+    - See https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 - [ ] Private view to keep track a track of purchased devices over a vertical timeline
+- [ ] Vision board with images or text of what I want to work towards - home office, old car and my own house. Use a private view.
+- [X] Fix broken image links on the posts page
 - [X] Add styling for inline <code> elements.
