@@ -23,6 +23,17 @@ A cheatsheet of the command prompt version of commonly used bash commands becaus
 ## cd
 Lucky you, this is just `cd`!
 
+## pwd
+```shell
+echo %cd%
+```
+
+or just,
+
+```shell
+cd
+```
+
 ## ls
 ```shell
 dir

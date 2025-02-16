@@ -69,7 +69,25 @@ hugo gen chromastyles --style=dracula > themes/green-screen/assets/sass/componen
 ```
 
 ## Supported Navigation Commands
-To navigate 
+
+### Navigating to main list views
+To navigate to a main list view:
+```shell
+ls posts
+```
+For examples to view posts, episodes, notes, projects or other main views like about, changelog, museum, credits etc.
+
+### Navigating to an article
+To navigate to read an article:
+```
+cat posts/hello-world.md
+```
+For example posts, episodes, notes or projects.
+
+### View previous commands
+To view previous commands use the arrow up or down keys.
+
+You can use `history -c` to clear all previously entered commands.
 
 ## License 📜
 My personal site is licensed under the [MIT License](https://mit-license.org/).
