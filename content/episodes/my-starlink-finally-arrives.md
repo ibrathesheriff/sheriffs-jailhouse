@@ -14,19 +14,20 @@ tags:
 keywords:
 - the-internet
 ---
-Internet service providers in Zimbabwe are seriously horrible. The market is an oligopoly, meaning the providers have remained unchallenged for years.
+Internet service providers in Zimbabwe are seriously horrible. The market is an oligopoly, meaning local providers an insane amount of the bargaining power.
 
-[Tweet by Michael]
+![Tweet about how slow Telone WIFI is](/img/episodes/cool-hardware/tweet-how-slow-telone-is.jpg)
 
-This tweet is not lying. There are providers that have such poor speeds that it's better to grab a flash drive and cycle the data yourself to the intended recipient. I have had to deal with:
+This tweet is all fact! There are providers that have such poor speeds that it's better to grab a flash drive and cycle the data yourself to the intended recipient. I have had to deal with:
 + Poor speeds
     - Some providers have max speeds of about 1.2 Mbps.
     - Some providers are messing around in the Kbps range!
 + Dead-zones: there's days where the service will just be down.
-    - There's a provider I once used that only gave you 15-20 days of actual uptime per month. The rest of the month I was just left chilling in the dark. Whenever I called they just kept saying, "we are working on it".
+    - There's a provider I once used that only gave you 15-20 days of actual uptime per month. The rest of the month I was just left chilling in the dark. Whenever I called they just kept saying, *"we are working on it"*.
 + Expensive
-    - I did my tertiary education studies in South Africa, and had access to some great WIFI connections. They cost a fraction of what I was paying in Zimbabwe. Like R450 vs. R4650. I mean, what the hell?
+    - I did my tertiary education studies in South Africa, and had access to some good WIFI connections. They cost a fraction of what I was paying in Zimbabwe. Think, R450 vs. R4650. I mean, what the hell?
     - How I am paying so much for a bad connection?
+    - Even capped packages can be expensive.
 
 ## Starlink is changing the game
 [Starlink](https://www.starlink.com/) is a satellite internet constellation operated by Starlink Services LLC, an international telecommunications provider that is a wholly owned subsidiary of the well-known American aerospace company, [SpaceX](https://www.spacex.com/).

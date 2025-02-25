@@ -57,5 +57,10 @@ type nul > your_file.txt
 cls
 ```
 
+## diff
+```shell
+FC file1.txt file2.txt
+```
+
 ## exit
 Lucky you, this is just `exit`!
