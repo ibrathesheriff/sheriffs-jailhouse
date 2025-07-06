@@ -48,6 +48,8 @@ Using HTTPS:
 git remote add origin https://github.com/username/new-repo.git
 ```
 
+I found using the SSH approach ideal.
+
 ## Step 5: Push to GitHub
 ```shell
 git push origin master
@@ -59,4 +61,4 @@ If this step is successful you should now see your BitBucket repository contents
 git remote rm bitbucket
 ```
 
-Done!
+Done! Bye-bye BitBucket...
