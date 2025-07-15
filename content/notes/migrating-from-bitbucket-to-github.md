@@ -17,7 +17,7 @@ keywords:
 ---
 I was going to open with *"Ready to kick the Bucket and join the Hub?"* But something about it didn't quite sound right. So instead I will just say, ready to ditch BitBucket and move your repository to GitHub? If so, this is the note for you!
 
-## Step 0: Create GitHub
+## Step 0: Create GitHub repository
 Create a new empty repository on GitHub i.e. it should not contain a `README.md`, `gitignore` or LICENSE. It **MUST** be empty.
 
 You can use the same name as your BitBucket repository's name.
