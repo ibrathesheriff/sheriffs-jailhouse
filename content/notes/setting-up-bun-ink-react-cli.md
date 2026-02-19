@@ -45,7 +45,7 @@ bun add ink react
 bun add -d @types/react typescript
 ```
 
-## Configure TypeScript
+## Configure TypeScript: tsconfig.json
 ```json
 {
   "compilerOptions": {
