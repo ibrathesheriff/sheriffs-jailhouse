@@ -1,7 +1,7 @@
 ---
 title: "My Starlink Finally Arrives"
 date: 2025-02-13T20:35:19+02:00
-draft: true
+draft: false
 author: ibrathesheriff
 description: "After spending 2 months on the waiting list my Starlink finally arrived."
 categories:
