@@ -73,17 +73,17 @@ My experience in Academia, Entrepreneurship and Software Development have expose
 + Mockplus
 
 ## education
-**Ingenious Faces** | 2019  
-**Global Accelerator Program**
-
-**Stellenbosch University** | 2020     
-**Bcom Data Science (Mathematical Science focal area)**
-
-**Stellenbosch University** | 2021     
-**LaunchLab Countdown Programme**
-
 **Stellenbosch University** | 2022  
 **BSc. Hons. Computer Science**
+
+**Stellenbosch University** | 2021  
+**LaunchLab Countdown Programme**
+
+**Stellenbosch University** | 2020  
+**Bcom Data Science (Mathematical Science focal area)**
+
+**Ingenious Faces** | 2019  
+**Global Accelerator Program**
 
 **Act in Africa** | 2016  
 **ACT Entrepreneurship Programme**
