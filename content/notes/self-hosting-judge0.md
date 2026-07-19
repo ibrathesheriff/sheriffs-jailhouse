@@ -17,7 +17,7 @@ tags:
 keywords:
 - safely-run-code
 ---
-This note details the steps I took to self-host [judge0](https://judge0.com/) on a Hetzner cloud instance.
+This note details the steps I took to self-host [Judge0](https://github.com/judge0/judge0) on a Hetzner cloud instance.
 
 I setup the cloud instance as follows:
 + Location: Helsinki as Falkenstein and Nuremberg had no cost optimised option available at the time. I wanted the CX33 option.
@@ -198,3 +198,7 @@ docker compose up -d
 And it worked!
 
 ![And it worked!](/img/notes/learning/cloud-service-providers/judge0-successfully-self-hosted-on-hetzner.png)
+
+## Next,
+
+[Linking self-hosted Judge0 to a fastapi server]({{< ref "notes/linking-judge0-to-fastapi-server.md" >}})
