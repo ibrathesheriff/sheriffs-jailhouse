@@ -6,9 +6,11 @@ author: ibrathesheriff
 description: "There are times I feel tutorials and guides are like movie stunts, when you try it home it never works out as seen on the big screen."
 categories:
 - hosting
+- deployment
 tags:
 - dns
 - nameservers
+- cloudflare
 keywords:
 - dns
 ---
