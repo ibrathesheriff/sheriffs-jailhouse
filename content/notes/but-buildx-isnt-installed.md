@@ -7,13 +7,14 @@ draftMode: false
 author: ibrathesheriff
 description: "Resolving WARN[0000] Docker Compose is configured to build using Bake, but buildx isn't installed."
 categories:
-- web-development
-- hacking
+- docker
+- linux
 tags:
-- software
-- html
+- docker--buildx-plugin
+- docker-compose
+- linux
 keywords:
-- jabberwocky
+- docker
 ---
 I ran this command to deploy the hackthdegree API:
 ```shell

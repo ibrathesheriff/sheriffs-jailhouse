@@ -249,4 +249,14 @@ sudo apt install certbot -y
 ```
 Sweet, sweet HTTPS here we come!
 
+```shell
+sudo certbot --nginx -d api.hackthedegree.com
+```
+Enter your email and accept the Terms of Service.
+
+ Let's Encrypt certs expire every **90** days, but Certbot sets up a `systemd` timer for this automatically. Confirm it's active:
+```shell
+sudo systemctl status certbot.timer
+```
+
 Next, add a Firewall to ensure traffic only goes via the subdomain. No more `IP:PORT` access. Everything through nginx.
