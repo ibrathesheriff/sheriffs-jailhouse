@@ -41,3 +41,14 @@ Then verify the installation using:
 ```shell
 node -v
 ```
+
+## Alternatively 
+```shell
+curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash -
+sudo apt install -y nodejs
+```
+
+## Update npm
+```shell
+sudo npm install -g npm@latest
+```
